@@ -206,44 +206,49 @@ export default function Home() {
 
     <div className="flex md:grid md:grid-cols-3 gap-10 overflow-x-auto md:overflow-visible pb-4">
 
-      {/* CARD 1 */}
-      <motion.a
-        href="https://aibase.ng"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition"
-      >
-        <div className="h-52 overflow-hidden">
-          <img
-            src="https://aibase.ng/wp-content/uploads/2026/01/v2-16sxo9-t3z6a-768x512.jpg"
-            alt="AI and tech developments in Nigeria"
-            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
-        </div>
+     <motion.a
+  href="https://aibase.ng"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition min-h-[520px] flex flex-col"
+>
+  {/* IMAGE */}
+  <div className="h-76 overflow-hidden">
+    <img
+      src="https://aibase.ng/wp-content/uploads/2026/01/v2-16sxo9-t3z6a-768x512.jpg"
+      alt="AI and tech developments in Nigeria"
+      className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+    />
+  </div>
 
-        <div className="p-6">
-          <p className="text-xs text-gray-500 mb-2">
-            AIBase NG · Dec 21, 2025
-          </p>
+  {/* CONTENT */}
+  <div className="p-6 flex flex-col justify-between flex-1">
+    <p className="text-xs text-gray-500 mb-2">
+      AIBase NG · Dec 21, 2025
+    </p>
 
-          <h3 className="text-lg font-bold text-[#0F172A] leading-snug mb-4">
-            The Defining AI Moments in Nigeria in 2025
-          </h3>
+    <h3 className="text-lg font-bold text-[#0F172A] leading-snug mb-4 mt-3">
+      The Defining AI Moments in Nigeria in 2025
+    </h3>
 
-          <span className="text-sm font-medium text-[#B11226]">
-            Read more →
-          </span>
-        </div>
-      </motion.a>
+    <span className="text-sm font-medium text-[#B11226]">
+      Read more →
+    </span>
+  </div>
+</motion.a>
+
+
+
 
       {/* CARD 2 */}
       <motion.a
         href="https://businesspost.ng/technology/ai-and-web-development-the-unexpected-partnership-thats-changing-everything/"
         target="_blank"
         rel="noopener noreferrer"
-        className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition"
-      >
-        <div className="h-52 overflow-hidden">
+        className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition min-h-[520px] flex flex-col"
+>
+
+        <div className="h-76 overflow-hidden">
           <img
             src="https://businesspost.ng/wp-content/uploads/2024/12/web-development.jpeg"
             alt="Hackathon and tech innovation in Nigeria"
@@ -251,12 +256,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex flex-col justify-between flex-1">
           <p className="text-xs text-gray-500 mb-2">
             Business Post · Oct 12, 2025
           </p>
 
-          <h3 className="text-lg font-bold text-[#0F172A] leading-snug mb-4">
+          <h3 className="text-lg font-bold text-[#0F172A] leading-snug mb-4 mt-3">
             Lagos Team Nevo Wins Southwest Hackathon Showcasing AI & Tech
           </h3>
 
@@ -266,14 +271,17 @@ export default function Home() {
         </div>
       </motion.a>
 
+
+
       {/* CARD 3 */}
       <motion.a
         href="https://www.reuters.com/technology/google-among-investors-putting-110-million-into-nigerias-moniepoint-2024-10-29/"
         target="_blank"
         rel="noopener noreferrer"
-        className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition"
-      >
-        <div className="h-52 overflow-hidden">
+        className="group min-w-[280px] md:min-w-0 bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#B11226] transition min-h-[520px] flex flex-col"
+>
+
+        <div className="h-76 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
             alt="Fintech and tech funding in Nigeria"
@@ -281,7 +289,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex flex-col justify-between flex-1">
           <p className="text-xs text-gray-500 mb-2">
             Reuters · Oct 29, 2024
           </p>
