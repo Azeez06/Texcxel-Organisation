@@ -103,73 +103,98 @@ export default function Home() {
     </div>
 
   </div>
-</section><section className="bg-[#FAF7F2] border-t border-gray-200">
+</section>
+
+
+<section className="bg-[#FAF7F2] border-t border-gray-200">
   <div className="max-w-7xl mx-auto px-10 py-28">
 
-    <div className="grid md:grid-cols-2 gap-16 items-center">
+    {/* WRAP GRID IN RELATIVE CONTAINER */}
+    <div className="relative">
 
-      {/* IMAGE */}
-      <img
-  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
-  alt="Engineer coding at a workstation"
-  className="w-full h-[600px] object-cover object-top"
-/>
+   {/* OVERLAY TITLE */}
+<div className="absolute left-1/2 -translate-x-1/2 -top-10 z-20">
+  <h2 className="text-6xl font-extrabold tracking-tight whitespace-nowrap">
+    <span className="text-red-600">Tech</span>
+    <span className="text-[#0A1F44]">cXel</span>
+    <span className="text-[#0A1F44] ml-4">
+      Philosophy
+    </span>
+  </h2>
+</div>
 
-      {/* TEXT */}
-      <div className="space-y-10">
 
-        {/* MAIN TITLE */}
-        <h2 className="text-5xl font-extrabold text-[#0A1F44] leading-tight">
-          Our Philosophy
-        </h2>
+      {/* Add top padding so content sits under the overlay */}
+      <div className="grid md:grid-cols-2 gap-8 items-center pt-12">
 
-        {/* PHILOSOPHY STATEMENT */}
-        <p className="text-lg text-gray-700 font-semibold leading-relaxed">
-          We believe technology should simplify life, not complicate it.  
-          We design systems that are easy to understand, useful to people,  
-          and grounded in real-world impact.
-        </p>
+        {/* IMAGE */}
+        <img
+          src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
+          alt="Engineer coding at a workstation"
+          className="w-full h-[600px] object-cover object-top rounded-2xl"
+        />
 
-        {/* VALUES BLOCKS */}
-        <div className="space-y-6">
+        {/* TEXT */}
+        <div className="space-y-10">
 
-          <div>
-            <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-              Core Values
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Clarity over complexity. Impact over hype. Every design choice  
-              is guided by usefulness and integrity.
-            </p>
+          {/* remove old title */}
+          <p className="text-lg text-gray-700 font-semibold leading-relaxed">
+            We believe technology should simplify life, not complicate it.
+            We design systems that are easy to understand, useful to people,
+            and grounded in real-world impact.
+          </p>
+
+          <div className="space-y-6">
+
+            <div>
+              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
+                Core Values
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Clarity over complexity. Impact over hype. Every design choice
+                is guided by usefulness and integrity.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
+                Our Mission
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                To create digital solutions and learning platforms that address
+                real problems for people and organizations.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
+            Our Short Term Goals
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                 To launch and refine digital solutions that meet current market needs,
+  strengthen our portfolio, and establish Texcel as a credible technology partner.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
+                Our Long Term Goals
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                To consistently design and deploy long-lasting digital solutions that drive growth,
+  improve access, and create measurable value for people and organizations.
+              </p>
+            </div>
+
           </div>
-
-          <div>
-           <h3 className="text-xl font-bold text-red-600 mb-2">
-              Our Mission
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              To create digital solutions and learning platforms that address  
-              real problems for people and organizations.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-              What We Believe
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Good design feels effortless — even when powerful technology  
-              works behind the scenes.
-            </p>
-          </div>
-
         </div>
-      </div>
 
+      </div>
     </div>
 
   </div>
 </section>
+
 
 
 <section className="bg-[#F6F1E8] border-t border-gray-200">
