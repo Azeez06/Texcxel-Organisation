@@ -53,7 +53,15 @@ export default function HeroSlider() {
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative h-[90vh] min-h-[650px] overflow-hidden">
+   <section className="
+  relative 
+  h-[75vh] 
+  sm:h-[80vh] 
+  lg:h-[90vh] 
+  min-h-[520px] 
+  lg:min-h-[650px] 
+  overflow-hidden
+">
 
       {/* BACKGROUND IMAGE */}
       <AnimatePresence mode="wait">
@@ -74,8 +82,14 @@ export default function HeroSlider() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#08162F]/95 via-[#0A1F44]/85 to-[#08162F]/40" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-10 h-full flex items-center">
-        <AnimatePresence mode="wait">
+      <div className="
+  relative z-10 
+  max-w-7xl mx-auto 
+  px-6 sm:px-10 
+  h-full 
+  flex items-center
+">
+     <AnimatePresence mode="wait">
           <motion.div
             key={slide.id}
             initial={{ opacity: 0, y: 40 }}
