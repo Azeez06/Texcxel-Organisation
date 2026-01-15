@@ -159,9 +159,13 @@ export default function Home() {
   {/* BRAND ACCENT LINE */}
   <div className="h-[2px] bg-gradient-to-r from-[#B11226] via-[#0F172A] to-transparent" />
 </section>
-
  <HeroSlider />
-   <section className="bg-[#F6F1E8]">
+  <section className="
+  bg-[#F6F1E8]
+  -mt-16
+  md:mt-0
+">
+
   <div className="max-w-7xl mx-auto px-10 py-28">
 
     {/* HEADER */}
