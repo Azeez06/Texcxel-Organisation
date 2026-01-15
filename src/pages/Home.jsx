@@ -160,24 +160,8 @@ export default function Home() {
   <div className="h-[2px] bg-gradient-to-r from-[#B11226] via-[#0F172A] to-transparent" />
 </section>
  <HeroSlider />
-  <section className="
-  bg-[#F6F1E8]
-  -mt-16
-  md:mt-0
-">
-
-  <div className="max-w-7xl mx-auto px-10 py-28">
-
-    {/* HEADER */}
-    <div className="max-w-2xl mx-auto mb-14 text-center">
-      <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3">
-        Digital <span className="text-[#B11226]">&amp;</span> Futures
-      </h1>
-
-      <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]">
-        World-class experiences shaped by design and technology
-      </h2>
-    </div>
+  <section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
+    <div className="max-w-7xl mx-auto px-10 py-28"> {/* HEADER */} <div className="max-w-2xl mx-auto mb-14 text-center"> <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3"> Digital <span className="text-[#B11226]">&amp;</span> Futures </h1> <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]"> World-class experiences shaped by design and technology </h2> </div>
 
     {/* CARDS */}
     <div className="grid md:grid-cols-3 gap-6">
@@ -220,20 +204,25 @@ export default function Home() {
 
 <section className="bg-[#FAF7F2] border-t border-gray-200">
   <div className="max-w-7xl mx-auto px-10 py-28">
-
     {/* WRAP GRID IN RELATIVE CONTAINER */}
     <div className="relative">
-
-   {/* OVERLAY TITLE */}
-<div className="absolute left-1/2 -translate-x-1/2 -top-10 z-20">
-  <h2 className="text-6xl font-extrabold tracking-tight whitespace-nowrap">
+ <div className="absolute left-1/2 -translate-x-1/2 -top-8 md:-top-10 z-20">
+  <h2
+    className="
+      font-extrabold tracking-tight whitespace-nowrap
+      text-2xl sm:text-3xl
+      md:text-6xl
+      text-center
+    "
+  >
     <span className="text-red-600">Tech</span>
     <span className="text-[#0A1F44]">cXel</span>
-    <span className="text-[#0A1F44] ml-4">
+    <span className="text-[#0A1F44] ml-2 md:ml-4">
       Philosophy
     </span>
   </h2>
 </div>
+
 
 
       {/* Add top padding so content sits under the overlay */}
