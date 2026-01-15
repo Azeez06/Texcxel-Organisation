@@ -123,18 +123,28 @@ export default function Home() {
 
     {/* NAV LINKS */}
     <nav className="hidden md:flex gap-10 text-sm font-medium text-gray-700">
-      <a className="relative hover:text-[#B11226] transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#B11226] hover:after:w-full after:transition-all">
+      
+      <Link to="/about"
+      className="relative hover:text-[#B11226] transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#B11226] hover:after:w-full after:transition-all"
+      >
         About
-      </a>
+      </Link>
+    
       <a className="relative hover:text-[#B11226] transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#B11226] hover:after:w-full after:transition-all">
         What We Do
       </a>
       <a className="relative hover:text-[#B11226] transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#B11226] hover:after:w-full after:transition-all">
         Community
       </a>
-      <a className="relative hover:text-[#B11226] transition after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#B11226] hover:after:w-full after:transition-all">
-        Contact
-      </a>
+      <Link
+  to="/contact"
+  className="relative hover:text-[#B11226] transition
+    after:absolute after:left-0 after:-bottom-1
+    after:h-[2px] after:w-0 after:bg-[#B11226]
+    hover:after:w-full after:transition-all"
+>
+  Contact
+</Link>
     </nav>
 
     {/* CTA */}

@@ -40,6 +40,8 @@ import Weeknineback from "./dashboard/courses/backend/Weeknineback";
 import Weektenback from "./dashboard/courses/backend/Weektenback";
 import BookUs from "./pages/BookUs";
 import YourQuote from "./pages/YourQuote";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 
 function App() {
@@ -50,9 +52,11 @@ function App() {
         <Route path="/" element={<Home />} />
           <Route path="/book-us" element={<BookUs />} />
           <Route path="/your-quote" element={<YourQuote />} />
+          <Route path="/contact" element={<Contact />} />
         <Route path="/website" element={<Website />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/internship" element={<InternshipHub />} />
+        <Route path="/about" element={<About />} />
 
         <Route path="/courses/frontend" element={<Frontend />} />
         <Route path="/courses/backend" element={<Backend />} />
