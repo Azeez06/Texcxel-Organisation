@@ -38,7 +38,8 @@ import Weeksevenback from "./dashboard/courses/backend/Weeksevenback";
 import Weekeightback from "./dashboard/courses/backend/Weekeightback";
 import Weeknineback from "./dashboard/courses/backend/Weeknineback";
 import Weektenback from "./dashboard/courses/backend/Weektenback";
-
+import BookUs from "./pages/BookUs";
+import YourQuote from "./pages/YourQuote";
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route path="/" element={<Home />} />
+          <Route path="/book-us" element={<BookUs />} />
+          <Route path="/your-quote" element={<YourQuote />} />
         <Route path="/website" element={<Website />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/internship" element={<InternshipHub />} />
@@ -90,6 +93,7 @@ function App() {
         <Route path = "courses/backend/Weekeightback" element = {<Weekeightback/>} />
         <Route path = "courses/backend/Weeknineback" element = {<Weeknineback/>} />
         <Route path = "courses/backend/Weektenback" element = {<Weektenback/>} />
+    
 
           {/* later */}
         </Route>

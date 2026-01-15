@@ -4,6 +4,8 @@ import HeroSlider from "../components/home/HeroSlider";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, TrendingUp, UserPlus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const services = [ { title: "Website Design & Development", text: "We design and build clean, responsive, and scalable websites tailored to your goals. From landing pages to full web applications, our solutions prioritize usability, performance, and long-term growth.", link: "/website", }, 
   { title: "Brand & Graphic Design", text: "We create logos, brand identities, and visual systems that communicate clearly and consistently. Our designs help businesses build trust, recognition, and a strong digital presence.", }, 
@@ -13,10 +15,104 @@ const services = [ { title: "Website Design & Development", text: "We design and
   { title: "Public-Good Web Platforms", text: "We design and build free web tools that solve real problems in diverse sectors. These platforms are open for public use, created to help students, professionals, and communities access to digital solutions", link: "/public-platforms" },
 ];
 export default function Home() {
-  return (
-    <div className="w-full">
-        
+  const quotes =[
+  {
+    text: "Technology is best when it brings people together.",
+    author: "Matt Mullenweg"
+  },
+  {
+    text: "The best way to predict the future is to invent it.",
+    author: "Alan Kay"
+  },
+  {
+    text: "Learning never exhausts the mind.",
+    author: "Leonardo da Vinci"
+  },
+  {
+    text: "Success is the product of daily habits, not once-in-a-lifetime transformations.",
+    author: "James Clear"
+  },
+  {
+    text: "It’s not about ideas. It’s about making ideas happen.",
+    author: "Scott Belsky"
+  },
+  {
+    text: "The most powerful skill in technology is the ability to learn continuously.",
+    author: "Satya Nadella"
+  },
+  {
+    text: "An investment in knowledge pays the best interest.",
+    author: "Benjamin Franklin"
+  },
+  {
+    text: "If you’re not embarrassed by the first version of your product, you launched too late.",
+    author: "Reid Hoffman"
+  },
+  {
+    text: "Discipline is choosing between what you want now and what you want most.",
+    author: "Abraham Lincoln"
+  },
+  {
+    text: "Every great developer you know got there by solving problems they were unqualified to solve.",
+    author: "Patrick McKenzie"
+  },
+  {
+    text: "The function of education is to teach one to think intensively and critically.",
+    author: "Martin Luther King Jr."
+  },
+  {
+    text: "Start where you are. Use what you have. Do what you can.",
+    author: "Arthur Ashe"
+  },
+  {
+    text: "The real problem is not whether machines think but whether people do.",
+    author: "B. F. Skinner"
+  },
+  {
+    text: "Small disciplines repeated with consistency every day lead to great achievements.",
+    author: "John C. Maxwell"
+  },
+  {
+    text: "Learning to write programs stretches your mind and helps you think better.",
+    author: "Bill Gates"
+  },
+  {
+    text: "Do not wait to strike till the iron is hot; make it hot by striking.",
+    author: "William Butler Yeats"
+  },
+  {
+    text: "You don’t have to be great to start, but you have to start to be great.",
+    author: "Zig Ziglar"
+  },
+  {
+    text: "The ability to simplify means to eliminate the unnecessary so that the necessary may speak.",
+    author: "Hans Hofmann"
+  },
+  {
+    text: "Growth and comfort do not coexist.",
+    author: "Ginni Rometty"
+  },
+  {
+    text: "First learn the rules, then break them intelligently.",
+    author: "Pablo Picasso"
+  }
+];
 
+   const [isOpen, setIsOpen] = useState(false);
+  const [currentQuote, setCurrentQuote] = useState("");
+
+  const getRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setCurrentQuote(quotes[randomIndex]);
+  };
+
+  useEffect(() => {
+    if (isOpen) getRandomQuote();
+  }, [isOpen]);
+
+  const navigate = useNavigate();
+  return (
+    <div className="w-full">      
    <section className="sticky top-0 z-50 bg-[#F6F1E8]/95 backdrop-blur border-b border-gray-200">
   <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
 
@@ -42,7 +138,9 @@ export default function Home() {
     </nav>
 
     {/* CTA */}
-    <button className="text-sm font-semibold text-[#B11226] border border-[#B11226] px-6 py-2.5 rounded-lg hover:bg-[#B11226] hover:text-white transition">
+    <button 
+    onClick={ () => navigate("/book-us")}
+    className="text-sm font-semibold text-[#B11226] border border-[#B11226] px-6 py-2.5 rounded-lg hover:bg-[#B11226] hover:text-white transition">
       Talk to us
     </button>
 
@@ -464,13 +562,53 @@ export default function Home() {
 
         {/* Button */}
         <div className="mt-16">
-          <button className="border-2 border-red-600 text-red-600 px-10 py-3 font-semibold hover:bg-red-600 hover:text-white transition">
-            REQUEST A QUOTE
-          </button>
+         <button
+  onClick={() => setIsOpen(true)}
+  className="border-2 border-red-600 text-red-600 px-10 py-3 font-semibold hover:bg-red-600 hover:text-white transition"
+>
+  REQUEST A QUOTE
+</button>
         </div>
 
       </div>
     </section>
+    {/* MODAL — OUTSIDE THE SECTION */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-[#FAF7F2] p-8 rounded-2xl relative max-w-lg w-full">
+
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 text-xl"
+            >
+              ×
+            </button>
+
+            <h2 className="text-2xl font-bold text-center mb-6">
+              Quote of the Moment
+            </h2>
+
+           <p className="text-center text-lg mb-4">
+  “{currentQuote.text}”
+</p>
+<p className="text-center text-sm text-gray-500 font-semibold">
+  — {currentQuote.author}
+</p>
+
+
+            <div className="flex justify-center gap-4">
+              <button onClick={getRandomQuote}>
+                Another quote
+              </button>
+
+              <button onClick={() => setIsOpen(false)}>
+                Close
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
       <Footer />
     </div>
   );

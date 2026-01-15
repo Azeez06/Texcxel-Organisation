@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import {useNavigate} from "react-router-dom";
 /* SLIDES DATA */
 const slides = [
  {
@@ -45,6 +45,7 @@ const slides = [
 ];
 
 export default function HeroSlider() {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const slide = slides[index];
 
@@ -110,10 +111,13 @@ export default function HeroSlider() {
 
 
             <div className="flex gap-6">
-              <button className="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition">
-                Start a Project
+              <button onClick={()=> navigate("/internship")}
+              
+              className="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition">
+                Start Learning
               </button>
-              <button className="text-[#FAF7F2] font-semibold hover:underline">
+              <button onClick ={() => navigate("/website")}
+               className="text-[#FAF7F2] font-semibold hover:underline">
                 Explore our work →
               </button>
             </div>
