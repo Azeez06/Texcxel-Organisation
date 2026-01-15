@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white border-t border-[#1E293B]">
       <div className="max-w-7xl mx-auto px-10 py-24">
-        <div className="grid md:grid-cols-4 gap-16">
+       <div className="grid gap-16 md:grid-cols-4">
 
           {/* ABOUT US */}
           <div>
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
 
           {/* PAGES */}
-          <div>
+         <div className="hidden md:block">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-1 h-5 bg-[#B11226]" />
               <h4 className="font-bold tracking-wide">PAGES</h4>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* OTHERS */}
-          <div>
+          <div className="hidden md:block">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-1 h-5 bg-[#B11226]" />
               <h4 className="font-bold tracking-wide">OTHERS</h4>
