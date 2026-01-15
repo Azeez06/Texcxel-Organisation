@@ -56,10 +56,10 @@ export default function HeroSlider() {
    <section
   className="
     relative
-    h-[64vh]
-min-h-[500px]
-md:h-[90vh]
-md:min-h-[650px]
+    h-[68vh]
+    min-h-[520px]
+    md:h-[90vh]
+    md:min-h-[650px]
     overflow-hidden
   "
 >
