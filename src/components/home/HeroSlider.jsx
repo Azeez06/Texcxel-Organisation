@@ -53,16 +53,16 @@ export default function HeroSlider() {
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
 
   return (
-   <section className="
-  relative 
-  h-[75vh] 
-  sm:h-[80vh] 
-  lg:h-[90vh] 
-  min-h-[520px] 
-  lg:min-h-[650px] 
-  overflow-hidden
-">
-
+   <section
+  className="
+    relative
+    h-[68vh]
+    min-h-[520px]
+    md:h-[90vh]
+    md:min-h-[650px]
+    overflow-hidden
+  "
+>
       {/* BACKGROUND IMAGE */}
       <AnimatePresence mode="wait">
         {slide.image && (
@@ -82,14 +82,16 @@ export default function HeroSlider() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#08162F]/95 via-[#0A1F44]/85 to-[#08162F]/40" />
 
       {/* CONTENT */}
-      <div className="
-  relative z-10 
-  max-w-7xl mx-auto 
-  px-6 sm:px-10 
-  h-full 
-  flex items-center
-">
-     <AnimatePresence mode="wait">
+      <div
+  className="
+    relative z-10
+    max-w-7xl mx-auto
+    px-6 md:px-10
+    h-full
+    flex items-center
+  "
+>
+        <AnimatePresence mode="wait">
           <motion.div
             key={slide.id}
             initial={{ opacity: 0, y: 40 }}
@@ -103,21 +105,21 @@ export default function HeroSlider() {
             </p>
 
            <h1
-  className={`font-extrabold leading-tight mb-8 ${
+  className={`font-extrabold leading-tight mb-5 md:mb-8 text-[#FAF7F2] ${
     slide.id === 1
-      ? "text-6xl md:text-7xl tracking-tight text-[#FAF7F2]"
-      : "text-5xl md:text-6xl text-[#FAF7F2]"
+      ? "text-4xl md:text-7xl tracking-tight"
+      : "text-3xl sm:text-4xl md:text-6xl"
   }`}
 >
   {slide.title}
 </h1>
 
 
-            <p
-  className={`mb-10 ${
+    <p
+  className={`mb-6 md:mb-10 ${
     slide.id === 1
-      ? "text-xl text-gray-200 max-w-md"
-      : "text-lg text-gray-200 max-w-lg"
+      ? "text-base sm:text-lg md:text-xl text-gray-200 max-w-md"
+      : "text-sm sm:text-base md:text-lg text-gray-200 max-w-lg"
   }`}
 >
   {slide.description}
@@ -128,6 +130,7 @@ export default function HeroSlider() {
               <button onClick={()=> navigate("/internship")}
               
               className="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-700 transition">
+                
                 Start Learning
               </button>
               <button onClick ={() => navigate("/website")}
