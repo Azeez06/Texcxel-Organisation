@@ -56,10 +56,10 @@ export default function HeroSlider() {
    <section
   className="
     relative
-    h-[68vh]
-    min-h-[520px]
-    md:h-[90vh]
-    md:min-h-[650px]
+    h-[64vh]
+min-h-[500px]
+md:h-[90vh]
+md:min-h-[650px]
     overflow-hidden
   "
 >
@@ -98,14 +98,18 @@ export default function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.7 }}
-            className="max-w-xl"
+            className=" max-w-xl
+    -mt-12
+    sm:-mt-6
+    md:mt-0"
           >
-            <p className="text-red-600 font-bold uppercase tracking-wide mb-6">
+           <p className="text-red-600 font-bold uppercase tracking-wide mb-3 md:mb-6">
+
               {slide.eyebrow}
             </p>
 
            <h1
-  className={`font-extrabold leading-tight mb-5 md:mb-8 text-[#FAF7F2] ${
+  className={`font-extrabold leading-tight mb-7 md:mb-8 text-[#FAF7F2] ${
     slide.id === 1
       ? "text-4xl md:text-7xl tracking-tight"
       : "text-3xl sm:text-4xl md:text-6xl"
