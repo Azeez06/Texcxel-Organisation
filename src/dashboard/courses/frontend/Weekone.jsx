@@ -69,7 +69,16 @@ export default function Weekone() {
     </span>
   </h2>
 
-  <div className="space-y-7 text-gray-700 leading-relaxed text-base sm:text-lg">
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
     <p>
       When you open a website, a lot happens behind the scenes in just a
@@ -103,14 +112,16 @@ export default function Weekone() {
   </div>
 </div>
 
-{/* VIDEO RESOURCES */}
-<div className="mb-20">
 
-  <h3 className="text-xl font-bold text-[#0A1F44] mb-8">
+{/* VIDEO RESOURCES */}
+<div className="mb-24">
+
+  <h3 className="text-xl font-bold text-[#0A1F44] mb-10">
     Watch & Understand
   </h3>
 
   <div className="grid md:grid-cols-3 gap-8">
+    {/* cards stay the same */}
 
     {/* VIDEO 1 */}
     <div className="bg-white rounded-2xl border overflow-hidden shadow-sm">
