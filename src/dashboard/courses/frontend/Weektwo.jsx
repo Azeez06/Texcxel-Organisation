@@ -10,30 +10,28 @@ export default function Weektwo() {
   {/* HEADER */}
   <div className="mb-20 text-center">
 
-    {/* WEEK LABEL */}
    <div
   className="
     inline-flex items-center
     gap-1 sm:gap-2
     mb-6
     px-3 sm:px-4
-    py-1.5
+    py-2 sm:py-1.5
     rounded-full
     bg-[#F6F1E8]
     border border-red-200
     whitespace-nowrap
   "
 >
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Frontend Development
+  </span>
 
-  <span className="text-xs sm:text-sm font-bold uppercase tracking-wide text-red-600">
-  Frontend Development
-</span>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 2
+  </span>
+</div>
 
-<span className="text-xs sm:text-sm font-bold text-[#0A1F44]">
-  · Week 2
-</span>
-
-    </div>
      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
       CSS FUNDAMENTAL
     </h1>
