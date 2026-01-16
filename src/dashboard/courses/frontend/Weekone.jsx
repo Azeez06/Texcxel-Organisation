@@ -5,49 +5,71 @@ export default function Weekone() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
 
-        {/* HEADER */}
-        <div className="mb-16">
-          <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-            Frontend Development · Week 1
-          </span>
+  {/* HEADER */}
+  <div className="mb-20 text-center">
 
-          <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-            Web & HTML Foundations
-          </h1>
+    {/* WEEK LABEL */}
+    <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#F6F1E8] border border-red-200">
+      <span className="text-sm font-bold uppercase tracking-wide text-red-600">
+        Frontend Development
+      </span>
+      <span className="text-sm font-bold text-[#0A1F44]">
+        · Week 1
+      </span>
+    </div>
 
-          <p className="text-gray-700 max-w-3xl leading-relaxed">
-            This week introduces you to how the web works and the role of HTML
-            in structuring content. You’ll learn how websites are built from
-            the ground up and start writing clean, meaningful HTML.
-          </p>
-        </div>
+    {/* MAIN TITLE */}
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+      Web & HTML Foundations
+    </h1>
 
-        {/* LEARNING OBJECTIVES */}
-        <div className="bg-white rounded-3xl border p-8 mb-12">
-          <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
-            What you will learn
-          </h2>
+    {/* DESCRIPTION */}
+    <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
+      This week introduces you to how the web works and the role of HTML in
+      structuring content. You’ll learn how websites are built from the ground
+      up and begin writing clean, meaningful HTML.
+    </p>
 
-          <ul className="space-y-4 text-gray-700">
-            <li>— How the web works (browser, server, URLs)</li>
-            <li>— Basic structure of an HTML document</li>
-            <li>— Common HTML tags and elements</li>
-            <li>— Semantic HTML and why it matters</li>
-            <li>— Accessibility and best practices</li>
-          </ul>
-        </div>
+  </div>
+{/* LEARNING OBJECTIVES */}
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
+  <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
+    What you will learn
+  </h2>
+
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "How the web works (browser, server, URLs)",
+      "Basic structure of an HTML document",
+      "Common HTML tags and elements",
+      "Semantic HTML and why it matters",
+      "Accessibility and best practices",
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
 {currentTopic === 0 && (
   <>
       {/* SECTION: HOW THE WEB WORKS */}
-<div className="mb-16">
+<div className="mb-20 max-w-4xl">
 
-  <h2 className="text-2xl font-bold text-[#0A1F44] mb-6">
-    How the Web Works (Browser, Server & URLs)
+  <h2 className="text-2xl font-bold text-[#0A1F44] mb-8">
+    How the Web Works
+    <span className="block text-base font-medium text-gray-500 mt-1">
+      Browser, Server & URLs
+    </span>
   </h2>
 
-  <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+  <div className="space-y-7 text-gray-700 leading-relaxed text-base sm:text-lg">
 
     <p>
       When you open a website, a lot happens behind the scenes in just a
@@ -59,29 +81,28 @@ export default function Weekone() {
 
     <p>
       A <strong>browser</strong> (such as Chrome, Firefox, or Safari) is the
-      application you use to access the web. When you type a website address
-      into the browser, it sends a request asking for the content of that
-      website. The browser’s job is to request data, receive it, and display it
-      in a way humans can easily understand.
+      application you use to access the web. When you type a website address,
+      the browser sends a request asking for the content. Its job is to
+      receive that data and display it in a way humans can easily understand.
     </p>
 
     <p>
-      A <strong>server</strong> is a powerful computer that stores website files
-      such as HTML, CSS, JavaScript, images, and videos. When the server
-      receives a request from your browser, it responds by sending back the
-      requested files. These files are then interpreted and rendered by the
-      browser to form the webpage you see.
+      A <strong>server</strong> is a powerful computer that stores website
+      files like HTML, CSS, JavaScript, images, and videos. When it receives
+      a request, it responds by sending back the required files, which the
+      browser then renders into a webpage.
     </p>
 
     <p>
-      A <strong>URL (Uniform Resource Locator)</strong> is the unique address of
-      a resource on the web. It tells the browser exactly where to go and what
-      to request from the server. In simple terms, the URL is the bridge that
-      connects your browser to the correct server and resource.
+      A <strong>URL (Uniform Resource Locator)</strong> is the unique address
+      of a resource on the web. It tells the browser exactly where to go and
+      what to request, acting as the bridge between your browser and the
+      correct server.
     </p>
 
   </div>
 </div>
+
 {/* VIDEO RESOURCES */}
 <div className="mb-20">
 
