@@ -195,13 +195,20 @@ export default function Weekone() {
 {currentTopic === 1 && (
   <>
 {/* SECTION: BASIC STRUCTURE OF HTML */}
-<div className="mb-20">
+<div className="mb-20 max-w-4xl">
 
-  <h2 className="text-2xl font-bold text-[#0A1F44] mb-6">
+  <h2 className="text-2xl font-bold text-[#0A1F44] mb-8">
     Basic Structure of an HTML Document
   </h2>
 
-  <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+  <div    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    ">
 
     <p>
       Every website you see on the internet is built on HTML. At the heart of
@@ -330,7 +337,14 @@ export default function Weekone() {
     Common HTML Tags and Elements
   </h2>
 
-  <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+   <div    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    ">
 
     <p>
       HTML works by using <strong>tags</strong> to define different types of
@@ -421,7 +435,14 @@ export default function Weekone() {
     Semantic HTML and Why It Matters
   </h2>
 
-  <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    ">
 
     <p>
       Semantic HTML refers to the use of HTML tags that clearly describe the
@@ -527,7 +548,14 @@ export default function Weekone() {
     Accessibility and Best Practices
   </h2>
 
-  <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    ">
 
     <p>
       Web accessibility means building websites that can be used by everyone,

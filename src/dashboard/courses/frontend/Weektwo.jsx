@@ -5,17 +5,38 @@ export default function Weektwo() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
+     <div className="max-w-5xl mx-auto px-6 md:px-8">
 
-        {/* HEADER */}
-        <div className="mb-16">
-          <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-            Frontend Development · Week 2
-          </span>
+  {/* HEADER */}
+  <div className="mb-20 text-center">
 
-          <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-            CSS Fundamentals
-          </h1>
+    {/* WEEK LABEL */}
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+
+  <span className="text-xs sm:text-sm font-bold uppercase tracking-wide text-red-600">
+  Frontend Development
+</span>
+
+<span className="text-xs sm:text-sm font-bold text-[#0A1F44]">
+  · Week 2
+</span>
+
+    </div>
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+      CSS FUNDAMENTAL
+    </h1>
 
           <p className="text-gray-700 max-w-3xl leading-relaxed">
             This week focuses on styling the web with confidence using CSS.
@@ -25,20 +46,30 @@ export default function Weektwo() {
           </p>
         </div>
 
-        {/* LEARNING OBJECTIVES */}
-        <div className="bg-white rounded-3xl border p-8 mb-12">
-          <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
-            What you will learn
-          </h2>
+       {/* LEARNING OBJECTIVES */}
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
 
-          <ul className="space-y-4 text-gray-700">
-            <li>— What CSS is and how it works with HTML</li>
-            <li>— CSS syntax, rules, and selectors</li>
-            <li>— The CSS box model (margin, border, padding, content)</li>
-            <li>— Working with colors, fonts, and text styling</li>
-            <li>— Spacing, sizing, and basic layout techniques</li>
-          </ul>
-        </div>
+  <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
+    What you will learn
+  </h2>
+
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+            "What CSS is and how it works with HTML",
+            "CSS syntax, rules, and selectors",
+            "The CSS box model (margin, border, padding, content)",
+            "Working with colors, fonts, and text styling",
+            "Spacing, sizing, and basic layout techniques"
+           ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
         {currentTopic === 0 && (
   <>
     {/* SECTION: WHAT IS CSS */}
