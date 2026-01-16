@@ -29,7 +29,7 @@ export default function Footer() {
 
           <p className="text-sm text-gray-300 leading-relaxed max-w-xs mx-auto md:mx-0">
             We work as a team to provide solutions to the emergence of digital
-            world. At Adatoworld, our customer is our first priority.
+            world. At TechcXel, our customer is our first priority.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export default function Footer() {
 
       {/* COPYRIGHT */}
       <div className="border-t border-[#1E293B] py-6 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Adatoworld | All Rights Reserved
+        © {new Date().getFullYear()} TechcXel | All Rights Reserved
       </div>
     </footer>
   );
