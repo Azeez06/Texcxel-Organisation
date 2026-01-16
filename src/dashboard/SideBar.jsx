@@ -15,16 +15,22 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* ===== MOBILE TOP BAR ===== */}
-      <div className="md:hidden sticky top-0 z-50 bg-[#0A1F44] px-4 py-3 flex items-center justify-between">
-        <h1 className="text-lg font-extrabold tracking-wide text-[#F6F1E8]">
-          <span className="text-[#B11226]">Tech</span>cXel
-        </h1>
-
-        <button onClick={() => setOpen(true)}>
-          <Menu className="w-6 h-6 text-[#F6F1E8]" />
-        </button>
-      </div>
+    <button
+  onClick={() => setOpen(true)}
+  className="
+    fixed md:hidden
+    top-4 left-4
+    z-40
+    bg-[#0A1F44]
+    text-white
+    p-3
+    rounded-xl
+    shadow-lg
+  "
+>
+  <Menu className="w-5 h-5" />
+</button>
+   
 
       {/* ===== MOBILE OVERLAY ===== */}
       {open && (
