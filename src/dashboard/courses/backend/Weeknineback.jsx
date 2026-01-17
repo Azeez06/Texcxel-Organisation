@@ -1,22 +1,43 @@
 import { useState } from "react";
 
-export default function Weekfourback() {
+export default function Weeknineback() {
    const [currentTopic, setCurrentTopic] = useState(0);
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 9
+   <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Advanced Backend Features
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 9
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Advanced Backend Features
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on building advanced, production-ready backend features
     commonly required in real-world applications. You will learn how to handle
     large datasets efficiently, implement searching and filtering logic, manage
@@ -25,18 +46,27 @@ export default function Weekfourback() {
   </p>
 </div>
 
+
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Implementing pagination for large datasets</li>
-    <li>— Filtering and searching data efficiently in APIs</li>
-    <li>— Handling file uploads (images, documents, media)</li>
-    <li>— Sending emails using backend services</li>
-    <li>— Applying production-ready backend patterns and best practices</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Implementing pagination for large datasets",
+      "Filtering and searching data efficiently in APIs",
+      "Handling file uploads (images, documents, media)",
+      "Sending emails using backend services",
+      "Applying production-ready backend patterns and best practices"
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))} 
   </ul>
 </div>
 
@@ -49,7 +79,16 @@ export default function Weekfourback() {
         Implementing Pagination for Large Datasets
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In real-world backend applications, databases often contain thousands
@@ -269,8 +308,16 @@ app.get("/api/products", async (req, res) => {
         Filtering & Searching Data in Backend APIs
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           As applications grow, users expect to quickly find exactly what they
           are looking for. Simply returning raw data is no longer enough.
@@ -520,8 +567,16 @@ app.get("/api/orders", async (req, res) => {
         Handling File Uploads & Media in Backend Applications
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           Modern backend applications rarely deal with text data alone. Real
           products require handling files such as profile pictures, documents,
@@ -759,8 +814,16 @@ await user.save();
       <h2 className="text-2xl font-bold text-[#0A1F44] mb-6">
         Email Services & Background Tasks in Production Backends
       </h2>
-
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+<div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern backend systems are not limited to responding to API requests.
@@ -1007,7 +1070,16 @@ await transporter.sendMail({
         Clean Architecture, Folder Structure, and Scalable Backend Design
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As backend applications grow, poor structure becomes one of the

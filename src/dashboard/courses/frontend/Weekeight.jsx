@@ -49,7 +49,17 @@ export default function Weekeight() {
         Understanding JSX and How It Combines HTML with JavaScript Logic
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           JSX (JavaScript XML) is a syntax extension for JavaScript that allows you
@@ -225,8 +235,17 @@ const list = (
         Creating and Using Functional React Components
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           Functional components are the backbone of modern React development. They are
           simple JavaScript functions that return JSX to describe what should appear on
@@ -414,7 +433,17 @@ function Counter() {
         Passing and Managing Data Using Props
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Props, short for properties, are the primary way to pass data from a parent
@@ -603,7 +632,17 @@ function App() {
         Building Reusable UI Blocks and Component Hierarchies
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           One of the most powerful features of React is its ability to create modular,

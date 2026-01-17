@@ -5,18 +5,39 @@ export default function Weekfourback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 5
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Express.js & REST APIs
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 5
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Express.js & Rest API
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on building real backend applications using Express.js.
     You will learn how to create structured APIs, handle client requests,
     process data, and send meaningful responses. By the end of this week,
@@ -26,21 +47,31 @@ export default function Weekfourback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— What Express.js is and why it is used in backend development</li>
-    <li>— Setting up an Express server and understanding application structure</li>
-    <li>— Handling routes and HTTP methods (GET, POST, PUT, DELETE)</li>
-    <li>— Understanding middleware and how it processes requests</li>
-    <li>— Sending structured responses using JSON</li>
-    <li>— RESTful API design principles and best practices</li>
-    <li>— Building clean, scalable, and maintainable API endpoints</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Learn how to use Express.js to create a backend server",
+      "What Express.js is and why it is used in backend development",
+      "Setting up an Express server and understanding application structure",
+      "Handling routes and HTTP methods (GET, POST, PUT, DELETE)",
+      "Understanding middleware and how it processes requests",
+      "Sending structured responses using JSON",
+      "RESTful API design principles and best practices",
+      "Building clean, scalable, and maintainable API endpoints",
+     ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</ span>
+      </li>
+    ))}
   </ul>
 </div>
+      
 
 {currentTopic === 0 && (
   <>
@@ -51,7 +82,17 @@ export default function Weekfourback() {
         What Express.js Is and Why It Is Used in Backend Development
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Express.js is a lightweight and flexible backend framework built on
@@ -237,7 +278,17 @@ app.listen(3000, () => {
         Setting Up an Express Server and Project Structure
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Before building APIs with Express, it is important to understand how
@@ -465,7 +516,17 @@ project-folder/
         Handling Routes and HTTP Methods (GET, POST, PUT, DELETE)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In backend development, <strong>routes</strong> define how your server
@@ -704,8 +765,17 @@ app.delete("/users/:id", (req, res) => {
         Understanding Middleware in Express (req, res, next)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           In Express, <strong>middleware</strong> is one of the most important
           concepts to understand because it controls how requests are processed
@@ -949,7 +1019,17 @@ app.use((err, req, res, next) => {
         RESTful API Design Principles
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           A <strong>RESTful API</strong> is a way of designing backend services
@@ -1200,8 +1280,17 @@ GET /api/v2/users
         Building Clean, Scalable, and Maintainable API Endpoints
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           As backend applications grow, APIs can quickly become difficult to
           manage if they are not structured properly. Clean and scalable API

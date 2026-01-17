@@ -49,7 +49,17 @@ export default function Weeksix() {
         Understanding the DOM and How Browsers Represent Web Pages
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           When a browser loads a website, it does not see the page the way humans
@@ -231,7 +241,17 @@ document.querySelector("ul").appendChild(newItem);
         Selecting and Manipulating HTML Elements with JavaScript
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Once a browser has created the DOM, JavaScript can interact with it by
@@ -461,7 +481,17 @@ setTimeout(() => {
         Handling User Events: Clicks, Input, and Form Submission
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern websites are interactive because they can respond to
@@ -672,8 +702,17 @@ inputField.addEventListener("blur", () => {
         Updating Content and Styles Dynamically
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           One of the most powerful features of JavaScript is its ability to
           <strong> change a web page after it has loaded</strong>. Instead of
@@ -890,8 +929,17 @@ document.getElementById("increaseBtn").addEventListener("click", () => {
         Building Simple Interactive Features Using JavaScript Logic
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           JavaScript logic is what transforms a webpage from a collection of
           elements into a <strong>thinking, responsive system</strong>.

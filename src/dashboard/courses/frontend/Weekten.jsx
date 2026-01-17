@@ -45,7 +45,17 @@ export default function Weekten() {
         Using Tailwind CSS Utility Classes for Rapid and Responsive Styling
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Tailwind CSS revolutionizes how we style websites. Instead of writing long, repetitive CSS rules, you apply <strong>utility classes</strong> directly to HTML elements. Each utility class represents a single styling property, like margin, padding, color, or typography. This approach allows developers to quickly prototype and build complex layouts without leaving the HTML.
@@ -202,7 +212,17 @@ export default function Weekten() {
         Designing Modern UI Components: Cards, Buttons, Modals, and Forms
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+      
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern web interfaces rely on reusable, visually appealing UI components. Components such as <strong>cards, buttons, modals, and forms</strong> provide structure, consistency, and interactivity across applications. Tailwind CSS makes designing these components fast, flexible, and maintainable by using utility classes.
@@ -371,8 +391,17 @@ export default function Weekten() {
         Implementing Layout Patterns with Flexbox & CSS Grid in Tailwind
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+      
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           Modern web design requires flexible and responsive layouts that adapt to different screen sizes. Tailwind CSS provides utility classes for <strong>Flexbox</strong> and <strong>CSS Grid</strong>, allowing you to create complex layouts without writing custom CSS. Understanding these tools is key to building clean, efficient UI systems.
         </p>
@@ -546,7 +575,17 @@ export default function Weekten() {
         Applying Spacing, Alignment, and Responsive Design Techniques
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Designing a polished interface isn’t just about colors or typography—spacing and alignment are critical for readability and user experience. Tailwind CSS provides a rich set of utilities for <strong>margin</strong>, <strong>padding</strong>, <strong>gap</strong>, and <strong>alignment</strong> so you can precisely control how elements are positioned on the page.
@@ -713,7 +752,17 @@ export default function Weekten() {
         Building Component-Based UI Systems with Tailwind CSS
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern web applications are built using reusable <strong>UI components</strong>. Tailwind CSS allows you to design these components with utility classes, ensuring consistent styling while keeping your code DRY (Don't Repeat Yourself). Components can range from buttons and cards to navigation bars and modals.

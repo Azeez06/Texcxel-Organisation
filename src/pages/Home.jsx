@@ -160,6 +160,104 @@ export default function Home() {
   <div className="h-[2px] bg-gradient-to-r from-[#B11226] via-[#0F172A] to-transparent" />
 </section>
  <HeroSlider />
+  
+  <section className="bg-gradient-to-b from-[#FAF7F2] to-[#F6F1E8] border-t border-gray-200">
+  <div className="max-w-7xl mx-auto px-10 py-32">
+
+    {/* SECTION HEADER */}
+   <div className="text-center mb-12">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-3">
+   What We Build at Techcxel
+  </h2>
+  <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+    Techcxel operates across three focused pillars. We build practical tools,
+create digital platforms, and develop tech talent for Nigerian realities.
+  </p>
+</div>
+
+
+    {/* CARDS */}
+    <div className="grid md:grid-cols-3 gap-10">
+
+      {/* INTERNSHIP — LEARNING & GROWTH */}
+      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#ECF5EE] border border-[#CFE6D8] shadow-sm hover:shadow-lg transition min-h-[540px]">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="People learning together"
+          className="h-52 w-full object-cover"
+        />
+
+        <div className="p-8 flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
+              Tech Skill Training
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              We train students and career-switchers in web design and development through
+real projects, mentorship, and guided practice that is beyound tutorials.
+            </p>
+          </div>
+
+          <Link to="/internship" className="mt-10 text-sm font-semibold text-[#2F7D4E] hover:underline cursor-pointer">
+           Explore Training →
+          </Link>
+        </div>
+      </div>
+
+      {/* BUILD WITH US — TRUST & PROFESSIONALISM */}
+      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#0F172A] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+          alt="Team discussion and planning"
+          className="h-52 w-full object-cover opacity-90"
+        />
+
+        <div className="p-8 flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">
+             Website & Platform Development
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+             We design and build custom websites and digital platforms for startups, NGOs,
+and growing organisations — tailored to real goals, not templates.
+            </p>
+          </div>
+
+          <button className="mt-10 self-start text-sm font-semibold text-white border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#0F172A] transition">
+          Book a Discovery Call
+          </button>
+        </div>
+      </div>
+
+      {/* PROBLEM SOLVERS — IMPACT & PURPOSE */}
+      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#B11226] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
+        <img
+          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+          alt="Community using technology"
+          className="h-52 w-full object-cover opacity-95"
+        />
+
+        <div className="p-8 flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">
+              Free Digital Tools
+            </h3>
+            <p className="text-gray-100 leading-relaxed">
+              We build free, web-based tools that solve real problems in education,
+career development, and local sectors — designed for Nigerian users.
+            </p>
+          </div>
+
+          <button className="mt-10 self-start text-sm font-semibold bg-white text-[#B11226] px-5 py-2 rounded-md hover:bg-gray-100 transition">
+          Explore Our Tools
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   <section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
     <div className="max-w-7xl mx-auto px-10 py-28"> {/* HEADER */} <div className="max-w-2xl mx-auto mb-14 text-center"> <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3"> Digital <span className="text-[#B11226]">&amp;</span> Futures </h1> <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]"> World-class experiences shaped by design and technology </h2> </div>
 
@@ -338,9 +436,6 @@ export default function Home() {
   </div>
 </motion.a>
 
-
-
-
       {/* CARD 2 */}
       <motion.a
         href="https://businesspost.ng/technology/ai-and-web-development-the-unexpected-partnership-thats-changing-everything/"
@@ -417,11 +512,11 @@ export default function Home() {
     {/* SECTION HEADER */}
    <div className="text-center mb-12">
   <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-3">
-    Choose Your Path
+   What We Build at Techcxel
   </h2>
   <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-    There are different ways to engage with our work. Choose the path that
-    matches your goals and intentions.
+    Techcxel operates across three focused pillars — building practical tools,
+creating digital platforms, and developing tech talent for Nigerian realities.
   </p>
 </div>
 
@@ -440,18 +535,17 @@ export default function Home() {
         <div className="p-8 flex flex-col justify-between flex-1">
           <div>
             <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
-              Explore Our Internship
+              Tech Skill Training
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Learn website design and development through real projects,
-              mentorship, and guided practice. Our internship focuses on
-              building confidence, clarity, and practical skills.
+              We train students and career-switchers in web design and development through
+real projects, mentorship, and guided practice that is beyound tutorials.
             </p>
           </div>
 
-          <span className="mt-10 text-sm font-semibold text-[#2F7D4E] hover:underline cursor-pointer">
-            View Internship →
-          </span>
+          <Link to="/internship" className="mt-10 text-sm font-semibold text-[#2F7D4E] hover:underline cursor-pointer">
+           Explore Training →
+          </Link>
         </div>
       </div>
 
@@ -466,17 +560,16 @@ export default function Home() {
         <div className="p-8 flex flex-col justify-between flex-1">
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Build Your Website With Us
+             Website & Platform Development
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Book a conversation with us to design and build a website or
-              digital platform for your organisation. We work with NGOs,
-              individuals, and public institutions.
+             We design and build custom websites and digital platforms for startups, NGOs,
+and growing organisations — tailored to real goals, not templates.
             </p>
           </div>
 
           <button className="mt-10 self-start text-sm font-semibold text-white border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#0F172A] transition">
-            Book a Chat
+          Book a Discovery Call
           </button>
         </div>
       </div>
@@ -492,17 +585,16 @@ export default function Home() {
         <div className="p-8 flex flex-col justify-between flex-1">
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Explore Problem-Solving Websites
+              Free Digital Tools
             </h3>
             <p className="text-gray-100 leading-relaxed">
-              Explore free websites we have built to solve real problems in
-              communities, education, and local sectors. These tools are open
-              and accessible to everyone.
+              We build free, web-based tools that solve real problems in education,
+career development, and local sectors — designed for Nigerian users.
             </p>
           </div>
 
           <button className="mt-10 self-start text-sm font-semibold bg-white text-[#B11226] px-5 py-2 rounded-md hover:bg-gray-100 transition">
-            View Projects
+          Explore Our Tools
           </button>
         </div>
       </div>

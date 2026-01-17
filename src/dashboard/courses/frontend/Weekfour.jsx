@@ -5,19 +5,38 @@ export default function Weekone() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
 
-        {/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Frontend Development · Week 4
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Frontend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Advanced CSS & Mini Project
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 4
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+      Advance Css & Mini Project
+    </h1>
+
+ <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week takes your CSS skills to the next level. You’ll learn how to
     create smooth animations and transitions, write clean and scalable CSS,
     and apply best practices while building a complete responsive mini
@@ -25,19 +44,27 @@ export default function Weekone() {
   </p>
 </div>
 
-{/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— CSS transitions and animations for interactive user experiences</li>
-    <li>— Advanced styling techniques and CSS best practices</li>
-    <li>— Writing clean, maintainable, and scalable CSS code</li>
-    <li>— Structuring and styling a real-world responsive layout</li>
-    <li>— Building and completing a responsive mini project</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      " CSS transitions and animations for interactive user experiences",
+      "Advanced styling techniques and CSS best practices",
+      "Writing clean, maintainable, and scalable CSS code",
+      "Structuring and styling a real-world responsive layout",
+      "Building and completing a responsive mini project"
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
   </ul>
+
 </div>
 
 {currentTopic === 0 && (
@@ -49,7 +76,17 @@ export default function Weekone() {
         CSS Transitions & Animations
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           CSS transitions and animations are what bring websites to life. They
@@ -262,7 +299,17 @@ button:hover {
         CSS Best Practices & Maintainable Styling
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As projects grow, CSS can quickly become difficult to manage if it is
@@ -468,7 +515,17 @@ button:hover {
         Writing Clean, Maintainable, and Scalable CSS Code
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+  
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Writing CSS is not just about making a page look good; it is about
@@ -589,7 +646,17 @@ button:hover {
         Mini Project — Build a Responsive Landing Page
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           This mini project brings together everything you have learned so far

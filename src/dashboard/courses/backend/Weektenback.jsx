@@ -5,18 +5,39 @@ export default function Weekfourback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-   {/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 10
+       <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Deployment & Capstone Project
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 10
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Deployment & Capstone Project
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This final week focuses on taking your backend skills into the real world.
     You will learn how to deploy backend applications, configure environments,
     connect to cloud databases, and build a complete, production-ready backend
@@ -26,18 +47,26 @@ export default function Weekfourback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Preparing backend applications for production deployment</li>
-    <li>— Managing environment configuration and secrets securely</li>
-    <li>— Deploying Node.js & Express applications to cloud platforms</li>
-    <li>— Connecting production apps to MongoDB Atlas</li>
-    <li>— Building and presenting a complete backend capstone project</li>
-  </ul>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+    "Preparing backend applications for production deployment",
+    "Managing environment configuration and secrets securely",
+    "Deploying Node.js & Express applications to cloud platforms",
+    "Connecting production apps to MongoDB Atlas",
+    "Building and presenting a complete backend capstone project"
+  ].map((item, i) => (
+    <li key={i} className="flex items-start gap-3">
+      <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>
 </div>
 {currentTopic === 0 && (
   <>
@@ -48,7 +77,16 @@ export default function Weekfourback() {
         Preparing Backend Applications for Production Deployment
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Building a backend application locally is only the first step. In real
@@ -238,7 +276,16 @@ app.listen(PORT, () => {
         Deploying Backend Applications with Render, Railway & Vercel
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Once a backend application is production-ready, the next critical
@@ -360,7 +407,16 @@ JWT_SECRET=supersecretkey
         Platform-Specific Deployment Flow
       </h3>
 
-      <div className="space-y-6 text-gray-700">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           <strong>Render:</strong> Create a new Web Service → Connect GitHub →
@@ -465,7 +521,16 @@ JWT_SECRET=supersecretkey
         Backend Capstone Project — Building a Production-Ready API
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           The capstone project is the final and most important part of this

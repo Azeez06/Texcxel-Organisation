@@ -5,18 +5,39 @@ export default function Weekfourback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 6
+       <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    MongoDB & Node Integration
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 6
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    MongoDB & Node Integration
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on connecting your backend logic to a real database.
     You will learn how to integrate MongoDB with Node.js and Express using
     Mongoose, define schemas and models, and build full CRUD APIs backed by
@@ -27,18 +48,26 @@ export default function Weekfourback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Connecting MongoDB to Express using Mongoose</li>
-    <li>— Defining schemas and models to structure application data</li>
-    <li>— Performing CRUD operations using Mongoose models</li>
-    <li>— Building REST APIs backed by MongoDB</li>
-    <li>— Handling database errors and validation failures</li>
-    <li>— Writing clean and maintainable data access logic</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Connecting MongoDB to Express using Mongoose",
+      "Defining schemas and models to structure application data",
+      "Performing CRUD operations using Mongoose models",
+      "Building REST APIs backed by MongoDB",
+      "Handling database errors and validation failures",
+      "Writing clean and maintainable data access logic"
+ ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</ span>
+      </li>
+    ))}
   </ul>
 </div>
 {currentTopic === 0 && (
@@ -1102,7 +1131,16 @@ export default app;
         Writing Clean and Maintainable Data Access Logic
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+ <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           As backend applications grow, one of the fastest ways to create bugs
           and technical debt is by writing database logic directly inside routes.

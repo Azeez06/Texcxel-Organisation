@@ -105,7 +105,17 @@ export default function Weekseven() {
         Writing Concise Functions Using Arrow Function Syntax
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As JavaScript applications grow, functions become one of the most
@@ -295,7 +305,17 @@ console.log(evenNumbers);
         Modern Array Methods: Processing Data with map, filter, find, and reduce
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern JavaScript applications work heavily with data—lists of users,
@@ -510,7 +530,17 @@ console.log(total);
         Destructuring & Spread Operator: Cleaner Data Handling in Modern JavaScript
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As JavaScript applications grow, you often work with complex data
@@ -733,7 +763,17 @@ console.log(updatedSettings);
         JavaScript Modules: Splitting Code into Reusable Files
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+      
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As your JavaScript applications grow, keeping all code in a single
@@ -930,7 +970,16 @@ console.log(circle(7));
         Writing Clean, Readable, and Maintainable JavaScript
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As your projects grow, writing JavaScript that is messy, inconsistent,

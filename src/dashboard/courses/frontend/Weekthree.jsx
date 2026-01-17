@@ -1,22 +1,42 @@
 import { useState } from "react";
 
 export default function Weekthree() {
-   const [currentTopic, setCurrentTopic] = useState(0);
+  const [currentTopic, setCurrentTopic] = useState(0);
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Frontend Development · Week 3
+     <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Frontend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Layouts & Responsive Design
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 3
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+      LAYOUT & RESPONSIVE DESIGN
+    </h1>
+
+ <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on how to properly structure and arrange elements on a
     webpage. You’ll learn how to build layouts that adapt smoothly across
     different screen sizes, ensuring your designs look good on mobile,
@@ -24,30 +44,48 @@ export default function Weekthree() {
   </p>
 </div>
 
-{/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+      {/* LEARNING OBJECTIVES */}
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Understanding layout problems and how CSS solves them</li>
-    <li>— Building layouts using Flexbox (rows, columns, alignment)</li>
-    <li>— Creating complex page structures with CSS Grid</li>
-    <li>— Responsive design principles and mobile-first workflow</li>
-    <li>— Using media queries to adapt layouts for different screen sizes</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      " Understanding layout problems and how CSS solves them",
+      "Building layouts using Flexbox (rows, columns, alignment)",
+      "Creating complex page structures with CSS Grid",
+      "Responsive design principles and mobile-first workflow",
+      "Using media queries to adapt layouts for different screen sizes"
+         ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
   </ul>
 </div>
+
 {currentTopic === 0 && (
   <>
     {/* SECTION: UNDERSTANDING LAYOUT PROBLEMS */}
-    <div className="mb-16">
+ <div className="mb-20 max-w-4xl">
 
-      <h2 className="text-2xl font-bold text-[#0A1F44] mb-6">
+  <h2 className="text-2xl font-bold text-[#0A1F44] mb-8">
         Understanding Layout Problems and How CSS Solves Them
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
+
 
         <p>
           One of the most common challenges in web development is controlling
@@ -170,7 +208,16 @@ export default function Weekthree() {
         Building Layouts Using Flexbox (Rows, Columns & Alignment)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+      <div className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
+
 
         <p>
           Flexbox is a CSS layout system designed to make arranging elements
@@ -192,7 +239,7 @@ export default function Weekthree() {
           One of Flexbox’s biggest strengths is alignment. Properties like
           <strong> justify-content</strong> and <strong>align-items</strong>
           allow you to center content, spread items evenly, or push elements
-          to the edges of a container — tasks that were once very difficult
+          to the edges of a container. These are tasks that were once very difficult
           with traditional CSS.
         </p>
 
@@ -293,7 +340,15 @@ export default function Weekthree() {
         Creating Complex Page Structures with CSS Grid
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           CSS Grid is a powerful layout system built specifically for creating
@@ -442,9 +497,15 @@ export default function Weekthree() {
         Responsive Design Principles and Mobile-First Workflow
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
-        <p>
+     <div className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >     <p>
           Responsive design is the practice of building websites that adapt
           smoothly to different screen sizes and devices. Instead of designing
           separate websites for phones, tablets, and desktops, responsive
@@ -595,7 +656,16 @@ export default function Weekthree() {
         Using Media Queries to Adapt Layouts for Different Screen Sizes
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
+
 
         <p>
           Media queries are a core tool in responsive web design. They allow

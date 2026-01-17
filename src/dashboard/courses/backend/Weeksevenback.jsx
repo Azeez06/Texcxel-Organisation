@@ -5,18 +5,39 @@ export default function Weekfourback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 7
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Authentication & Authorization
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 7
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Authentication & Authorisation
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on securing backend applications by implementing proper
     authentication and authorization systems. You will learn how users are
     identified, how access is controlled, and how modern APIs protect sensitive
@@ -25,17 +46,25 @@ export default function Weekfourback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Understanding authentication vs authorization in backend systems</li>
-    <li>— Password hashing and secure credential storage</li>
-    <li>— Implementing JWT-based authentication</li>
-    <li>— Protecting routes using middleware</li>
-    <li>— Role-based access control (users, admins, permissions)</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Understanding authentication vs authorization in backend systems",
+      "Password hashing and secure credential storage",
+      "Implementing JWT-based authentication",
+      "Protecting routes using middleware",
+      "Role-based access control (users, admins, permissions)"
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
   </ul>
 </div>
 
@@ -49,7 +78,16 @@ export default function Weekfourback() {
         Authentication vs Authorization: Understanding Access Control
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In backend development, security starts with understanding two very
@@ -254,7 +292,16 @@ app.get("/profile", authenticateUser, (req, res) => {
         Password Hashing & Secure Credential Storage
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           One of the most critical responsibilities of a backend developer is
@@ -457,8 +504,16 @@ const user = {
         JWT Authentication: Tokens, Signing, Verification & Stateless Sessions
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           Once a user’s identity has been verified using a username and password,
           the backend needs a secure way to remember that user across multiple
@@ -673,7 +728,16 @@ app.get("/api/profile", authMiddleware, (req, res) => {
         Understanding Middleware in Express (req, res, next)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In Express, <strong>middleware</strong> is one of the most important
@@ -919,7 +983,16 @@ app.use((err, req, res, next) => {
         Protecting Routes, Middleware, Roles & Access Control
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Authentication answers the question <strong>“Who are you?”</strong>,

@@ -48,8 +48,17 @@ export default function Weekfive() {
         What JavaScript Is and How It Works with HTML
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           JavaScript is the programming language that brings life and behavior
           to websites. While HTML structures content and CSS styles it,
@@ -179,7 +188,17 @@ export default function Weekfive() {
         Variables, Data Types, and Storing Information
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+      
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In programming, information needs to be stored so it can be used,
@@ -369,7 +388,17 @@ let user = {
         Conditions & Control Flow
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In real life, decisions are made based on conditions. For example,
@@ -591,7 +620,17 @@ switch (day) {
         Repeating Tasks Using Loops
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+  
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In programming, repetition is unavoidable. Imagine having to display
@@ -845,7 +884,17 @@ for (let i = 1; i <= 5; i++) {
         Writing Reusable Code with Functions
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As applications grow, repeating the same logic in multiple places
@@ -1087,8 +1136,17 @@ console.log(subtract(10, 3));
         Basic JavaScript Logic (Conditions + Functions Together)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           Logic is the heart of programming. While variables store information
           and functions organize code, logic is what allows your program to

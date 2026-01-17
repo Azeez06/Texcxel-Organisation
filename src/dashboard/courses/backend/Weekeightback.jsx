@@ -5,18 +5,39 @@ export default function Weekfourback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
-{/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 8
+       <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Backend Security & Validation
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 8
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Backend Security & Validation
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week focuses on securing backend applications and building systems
     that are safe, reliable, and scalable. You will learn how to protect APIs
     from common attacks, validate incoming data, enforce usage limits, and
@@ -26,17 +47,25 @@ export default function Weekfourback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Validating user input and request data to prevent errors and attacks</li>
-    <li>— Common backend security risks and how to mitigate them</li>
-    <li>— Implementing rate limiting and request throttling in APIs</li>
-    <li>— Securing API endpoints using best practices and middleware</li>
-    <li>— Designing clean, scalable, and maintainable backend architecture</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Validating user input and request data to prevent errors and attacks",
+      "Common backend security risks and how to mitigate them",
+      "Implementing rate limiting and request throttling in APIs",
+      "Securing API endpoints using best practices and middleware",
+      "Designing clean, scalable, and maintainable backend architecture"
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</span>
+      </li>
+    ))}
   </ul>
 </div>
 
@@ -49,7 +78,17 @@ export default function Weekfourback() {
         Input Validation and Why It Is Critical for Backend Security
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Input validation is the process of checking and controlling the data
@@ -267,7 +306,16 @@ if (typeof age !== "number" || age < 18) {
         Common Backend Security Risks and How to Mitigate Them
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Backend applications are constantly exposed to the internet, which
@@ -490,7 +538,16 @@ app.use("/api", limiter);
         Rate Limiting, Request Throttling, and Abuse Prevention
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern backend applications are designed to serve many users at the
@@ -706,8 +763,16 @@ app.use((req, res, next) => {
         Clean Architecture, Folder Structure, and Scalable Backend Design
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           As backend applications grow, writing code that simply “works” is no
           longer enough. Large applications quickly become difficult to
@@ -946,7 +1011,16 @@ export const createUserService = async (data) => {
         Clean Architecture, Folder Structure, and Scalable Backend Design
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As backend applications grow, poor structure becomes one of the

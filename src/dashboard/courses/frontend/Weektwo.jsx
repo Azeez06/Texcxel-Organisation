@@ -36,7 +36,7 @@ export default function Weektwo() {
       CSS FUNDAMENTAL
     </h1>
 
-          <p className="text-gray-700 max-w-3xl leading-relaxed">
+         <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
             This week focuses on styling the web with confidence using CSS.
             You’ll learn how to control layout, spacing, colors, and typography,
             turning plain HTML into visually appealing and well-structured

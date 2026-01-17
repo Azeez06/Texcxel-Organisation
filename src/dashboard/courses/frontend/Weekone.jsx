@@ -5,24 +5,35 @@ export default function Weekone() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-6 md:px-8">
+       <div className="max-w-5xl mx-auto px-6 md:px-8">
 
   {/* HEADER */}
   <div className="mb-20 text-center">
 
-    {/* WEEK LABEL */}
-    <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#F6F1E8] border border-red-200">
-      <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-        Frontend Development
-      </span>
-      <span className="text-sm font-bold text-[#0A1F44]">
-        · Week 1
-      </span>
-    </div>
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Frontend Development
+  </span>
 
-    {/* MAIN TITLE */}
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
-      Web & HTML Foundations
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 1
+  </span>
+</div>
+
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+      WEB & HTML BASICS
     </h1>
 
     {/* DESCRIPTION */}

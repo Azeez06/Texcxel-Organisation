@@ -45,7 +45,17 @@ export default function Weekone() {
         Understanding React State and Managing Dynamic Data
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+   
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In React, <strong>state</strong> is a fundamental concept that allows your components
@@ -278,7 +288,17 @@ function Profile() {
         Conditional Rendering of Components in React
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+ 
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In React, components can dynamically decide what to display based on certain conditions. This is called <strong>conditional rendering</strong>. Rather than rendering the same static UI all the time, conditional rendering lets your app respond intelligently to user actions, state changes, or fetched data.
@@ -461,7 +481,17 @@ function Content({ userRole }) {
         Handling User Input and Forms with React State
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In React, forms and user input are not just static—they are dynamic and interactive. Handling forms effectively means capturing user input, storing it in <strong>state</strong>, and responding to changes instantly. React’s <strong>useState</strong> hook allows us to manage form values seamlessly.
@@ -683,7 +713,17 @@ function FeedbackForm() {
         React Router: Navigating and Managing Multiple Pages
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Modern web applications are rarely just a single page. Users expect to navigate between sections seamlessly—like visiting a homepage, dashboard, or profile page—without the browser reloading. <strong>React Router</strong> makes this possible by enabling client-side routing, which means navigation is handled entirely in React.
@@ -883,8 +923,17 @@ function Dashboard() {
         Conditional Rendering & Application Structure in React
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
-
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
         <p>
           As applications grow, not all UI elements are always visible. Maybe you want to show a welcome message only when the user is logged in, or display a loading spinner while fetching data. <strong>Conditional rendering</strong> allows React to render components, elements, or messages based on state, props, or computed conditions. This creates dynamic, intelligent UIs that adapt to user interactions.
         </p>

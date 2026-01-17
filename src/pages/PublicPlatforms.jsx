@@ -71,7 +71,7 @@ export default function PublicPlatforms() {
             <div className="bg-[#FBF6EF] rounded-3xl border p-8 shadow-sm">
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1586281380349-632531db7ed4"
+                  src="https://my-real-final-plp-project-8q5a.vercel.app/"
                   alt="CareerBuilder platform"
                   className="w-full h-56 object-cover"
                 />
@@ -88,7 +88,7 @@ export default function PublicPlatforms() {
               </p>
 
               <a
-                href="#"
+                href="https://my-real-final-plp-project-8q5a.vercel.app/"
                 className="inline-block text-red-600 font-bold hover:underline"
               >
                 Visit Platform →
@@ -116,7 +116,7 @@ export default function PublicPlatforms() {
               </p>
 
               <a
-                href="#"
+                href="https://social-sciences-xi.vercel.app/"
                 className="inline-block text-red-600 font-bold hover:underline"
               >
                 Visit Platform →

@@ -5,18 +5,39 @@ export default function Weekthreeback() {
 
   return (
     <section className="bg-[#FAF7F2] min-h-screen py-20">
-      <div className="max-w-5xl mx-auto px-8">
- {/* HEADER */}
-<div className="mb-16">
-  <span className="text-sm font-bold uppercase tracking-wide text-red-600">
-    Backend Development · Week 3
+    <div className="max-w-5xl mx-auto px-6 md:px-8">
+
+  {/* HEADER */}
+  <div className="mb-20 text-center">
+
+   <div
+  className="
+    inline-flex items-center
+    gap-1 sm:gap-2
+    mb-6
+    px-3 sm:px-4
+    py-2 sm:py-1.5
+    rounded-full
+    bg-[#F6F1E8]
+    border border-red-200
+    whitespace-nowrap
+  "
+>
+  <span className="text-sm sm:text-sm font-bold uppercase tracking-wide text-red-600">
+    Backend Development
   </span>
 
-  <h1 className="text-4xl font-extrabold text-[#0A1F44] mt-4 mb-6">
-    Advanced MongoDB & Data Design
-  </h1>
+  <span className="text-sm sm:text-sm font-bold text-[#0A1F44]">
+    · Week 2
+  </span>
+</div>
 
-  <p className="text-gray-700 max-w-3xl leading-relaxed">
+     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0A1F44] mb-5">
+    Advanced MongoDB & Data Design 
+    </h1>
+
+
+  <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
     This week dives deeper into MongoDB by focusing on performance, scalability,
     and real-world data design decisions. You will learn how MongoDB handles
     relationships between data, how indexes improve query speed, and how to
@@ -27,18 +48,26 @@ export default function Weekthreeback() {
 </div>
 
 {/* LEARNING OBJECTIVES */}
-<div className="bg-white rounded-3xl border p-8 mb-12">
+<div className="bg-white rounded-3xl border border-gray-200 p-8 mb-16">
+
   <h2 className="text-xl font-bold text-[#0A1F44] mb-6">
     What you will learn
   </h2>
 
-  <ul className="space-y-4 text-gray-700">
-    <li>— Understanding indexes and how they improve MongoDB performance</li>
-    <li>— Modeling relationships between documents in MongoDB</li>
-    <li>— Embedded vs referenced documents and when to use each</li>
-    <li>— Designing scalable schemas for real-world applications</li>
-    <li>— Applying MongoDB best practices for performance and maintainability</li>
-    <li>— Common data modeling mistakes and how to avoid them</li>
+  <ul className="space-y-4 text-gray-700 text-base leading-relaxed">
+    {[
+      "Understanding indexes and how they improve MongoDB performance",
+      "Modeling relationships between documents in MongoDB",
+      "Embedded vs referenced documents and when to use each",
+      "Designing scalable schemas for real-world applications",
+      "Applying MongoDB best practices for performance and maintainability",
+      "Common data modeling mistakes and how to avoid them"
+    ].map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="mt-1 w-2 h-2 rounded-full bg-red-600" />
+        <span>{item}</ span>
+      </li>
+    ))}
   </ul>
 </div>
 
@@ -51,7 +80,17 @@ export default function Weekthreeback() {
         Understanding Indexes and How They Improve MongoDB Performance
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           As databases grow, performance becomes one of the most important
@@ -247,7 +286,17 @@ db.users.createIndex({ age: 1, name: 1 });`}</code>
         Modeling Relationships in MongoDB (Embedded vs Referenced Documents)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+     
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           In real-world applications, data rarely exists in isolation. Users
@@ -462,7 +511,17 @@ db.orders.find({ userId: ObjectId("user1") });`}</code>
         Schema Design Best Practices for Real-World MongoDB Applications
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Schema design is one of the most critical decisions in backend
@@ -680,7 +739,17 @@ db.orders.find({ userId: ObjectId("user1") })
         Data Modeling in MongoDB (Embedding vs Referencing)
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Data modeling is the process of deciding <strong>how data is structured,
@@ -909,7 +978,17 @@ db.orders.find({ userId: ObjectId("user1") })
         Real-World MongoDB Best Practices & Common Mistakes
       </h2>
 
-      <div className="space-y-6 text-gray-700 leading-relaxed text-base">
+    
+  <div
+    className="
+      space-y-7
+      text-gray-700
+      text-base sm:text-lg
+      leading-[1.8]
+      text-left md:text-justify
+      hyphens-auto
+    "
+  >
 
         <p>
           Learning MongoDB syntax is only the beginning. In real-world backend
