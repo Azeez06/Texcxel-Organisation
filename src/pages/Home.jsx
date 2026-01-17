@@ -162,7 +162,7 @@ export default function Home() {
  <HeroSlider />
   
   <section className="bg-gradient-to-b from-[#FAF7F2] to-[#F6F1E8] border-t border-gray-200">
- <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-16 sm:pt-24 lg:pt-32 pb-24">
+ <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-13 sm:pt-24 lg:pt-32 pb-24">
 
 
     {/* SECTION HEADER */}
