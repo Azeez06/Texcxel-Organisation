@@ -265,6 +265,191 @@ career development, and local sectors — designed for Nigerian users.
 
   </div>
 </section>
+<section className="bg-[#FAF7F2] border-t border-[#E7E2D8] overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-24">
+
+    {/* SECTION HEADER */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-4">
+        Flagship Tools Built by{" "}
+        <span>
+          <span className="text-[#B11226]">Tech</span>
+          <span className="text-[#0F172A]">cXel</span>
+        </span>
+      </h2>
+
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Practical web tools designed to solve real Nigerian problems.
+      </p>
+
+      {/* Mobile hint */}
+      <p className="mt-4 text-sm text-gray-500 md:hidden">
+        Swipe to explore →
+      </p>
+    </div>
+
+    {/* MOBILE — HORIZONTAL SCROLL */}
+    <div className="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6">
+
+      {/* CARD 1 */}
+      <div className="min-w-[90%] snap-center rounded-3xl bg-white shadow-2xl border border-[#E5E0D6] p-6">
+        <span className="text-xs font-semibold text-[#B11226] tracking-wide">
+          CAREER TOOL
+        </span>
+
+        <h3 className="text-2xl font-bold text-[#0F172A] mt-2 mb-4">
+          CareerBuilder
+        </h3>
+
+        <div className="rounded-2xl overflow-hidden border border-[#E5E0D6] shadow-lg mb-5">
+          <img
+            src="/screenshots/careerbuilder-ui.png"
+            alt="CareerBuilder interface"
+            className="w-full object-cover"
+          />
+        </div>
+
+        <p className="text-gray-700 mb-3">
+          Build CVs, cover letters, SOPs, and mini portfolios in minutes.
+        </p>
+
+        <a
+          href="/careerbuilder"
+          className="inline-block mt-2 text-sm font-semibold text-[#B11226]"
+        >
+          Try CareerBuilder →
+        </a>
+      </div>
+
+      {/* CARD 2 */}
+      <div className="min-w-[90%] snap-center rounded-3xl bg-[#0F172A] text-white shadow-2xl p-6">
+        <span className="text-xs font-semibold tracking-wide text-[#F6F1E8]">
+          ACADEMIC TOOL
+        </span>
+
+        <h3 className="text-2xl font-bold mt-2 mb-4">
+          Academic Analysis Tool
+        </h3>
+
+        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg mb-5">
+          <img
+            src="/screenshots/academic-analysis-ui.png"
+            alt="Academic analysis tool interface"
+            className="w-full object-cover"
+          />
+        </div>
+
+        <p className="text-gray-300 mb-3">
+          Generate frequency tables, correlation, regression, and ANOVA —
+          without SPSS.
+        </p>
+
+        <a
+          href="/analysis-tool"
+          className="inline-block mt-2 text-sm font-semibold text-[#F6F1E8]"
+        >
+          Use the Tool →
+        </a>
+      </div>
+
+    </div>
+
+    {/* DESKTOP — YOUR ORIGINAL GRID (ENHANCED) */}
+    <div className="hidden md:block">
+
+      {/* PRODUCT 1 */}
+      <div className="grid md:grid-cols-2 gap-16 items-center mb-36">
+        <div>
+          <span className="text-sm font-semibold text-[#B11226]">
+            CAREER TOOL
+          </span>
+
+          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
+            CareerBuilder
+          </h3>
+
+          <p className="text-lg text-gray-800 mb-4">
+            Build CVs, cover letters, SOPs, and mini portfolios in minutes —
+            without stress or formatting confusion.
+          </p>
+
+          <p className="text-gray-600 mb-8">
+            Designed for students and early-career professionals.
+          </p>
+
+          <a
+            href="/careerbuilder"
+            className="text-sm font-semibold text-[#B11226]"
+          >
+            Try CareerBuilder →
+          </a>
+        </div>
+
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-[#E5E0D6] bg-white">
+          <img
+            src="/screenshots/careerbuilder-ui.png"
+            alt="CareerBuilder interface"
+            className="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      {/* PRODUCT 2 */}
+      <div className="grid md:grid-cols-2 gap-16 items-center mb-36">
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-[#E5E0D6] bg-white">
+          <img
+            src="/screenshots/academic-analysis-ui.png"
+            alt="Academic analysis tool interface"
+            className="w-full object-cover"
+          />
+        </div>
+
+        <div>
+          <span className="text-sm font-semibold text-[#0F172A]">
+            ACADEMIC TOOL
+          </span>
+
+          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
+            Academic Analysis Tool
+          </h3>
+
+          <p className="text-lg text-gray-800 mb-4">
+            Generate frequency tables, correlation, regression, and ANOVA
+            instantly — without SPSS.
+          </p>
+
+          <p className="text-gray-600 mb-8">
+            Built for Nigerian academic workflows.
+          </p>
+
+          <a
+            href="/analysis-tool"
+            className="text-sm font-semibold text-[#B11226]"
+          >
+            Use the Tool →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* COMING SOON */}
+    <div className="text-center mt-24 rounded-3xl bg-gradient-to-r from-[#0F172A] to-[#1F2937] px-8 py-16">
+      <p className="text-2xl font-bold text-white mb-4">
+        More problem-solving tools are coming.
+      </p>
+
+      <p className="text-gray-300 max-w-xl mx-auto">
+        We’re building at least six Nigerian-focused tools in one year —
+        each designed to remove friction and simplify real work.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
   <section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
     <div className="max-w-7xl mx-auto px-10 py-28"> {/* HEADER */} <div className="max-w-2xl mx-auto mb-14 text-center"> <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3"> Digital <span className="text-[#B11226]">&amp;</span> Futures </h1> <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]"> World-class experiences shaped by design and technology </h2> </div>
 
