@@ -265,11 +265,11 @@ career development, and local sectors — designed for Nigerian users.
 
   </div>
 </section>
-<section className="bg-[#FAF7F2] border-t border-[#E7E2D8] overflow-hidden">
+<section className="bg-[#FAF7F2] border-t border-[#E7E2D8]">
   <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-24">
 
-    {/* SECTION HEADER */}
-    <div className="text-center max-w-3xl mx-auto mb-14">
+    {/* HEADER */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-4">
         Flagship Tools Built by{" "}
         <span>
@@ -278,101 +278,159 @@ career development, and local sectors — designed for Nigerian users.
         </span>
       </h2>
 
-      <p className="text-lg text-gray-700 leading-relaxed">
+      <p className="text-lg text-gray-700">
         Practical web tools designed to solve real Nigerian problems.
       </p>
 
-      <p className="mt-4 text-sm text-gray-500">
-        Swipe or scroll to explore →
+      <p className="mt-3 text-sm text-gray-500 md:hidden">
+        Swipe to explore →
       </p>
     </div>
 
-    {/* HORIZONTAL SCROLL — ALL SCREENS */}
-    <div className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-8">
+    {/* ================= MOBILE: HORIZONTAL SCROLL ================= */}
+    <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6">
 
-      {/* CARD 1 — CAREERBUILDER */}
-      <div className="min-w-[85%] md:min-w-[60%] snap-center rounded-3xl bg-[#FAF7F2] shadow-2xl border border-[#E5E0D6] p-8">
-        <span className="text-xs font-semibold tracking-wide text-[#B11226]">
+      {/* CARD 1 */}
+      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#FAF7F2] border border-[#E5E0D6] shadow-xl p-6">
+        <span className="text-xs font-semibold text-[#B11226]">
           CAREER TOOL
         </span>
 
-        <h3 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mt-2 mb-5">
+        <h3 className="text-2xl font-bold text-[#0F172A] mt-2 mb-4">
           CareerBuilder
         </h3>
 
-        <div className="rounded-2xl overflow-hidden border border-[#E5E0D6] shadow-lg mb-6 bg-white">
+        <div className="rounded-2xl overflow-hidden border border-[#E5E0D6] bg-white shadow-lg mb-5">
           <img
             src="/screenshots/careerbuilder-ui.png"
             alt="CareerBuilder interface"
-            className="w-full object-cover"
+            className="w-full"
           />
         </div>
 
-        <p className="text-gray-700 mb-4 text-lg">
+        <p className="text-gray-700 mb-4">
           Build CVs, cover letters, SOPs, and mini portfolios in minutes —
-          without stress or formatting confusion.
+          without formatting stress.
         </p>
 
-        <a
-          href="/careerbuilder"
-          className="inline-block text-sm font-semibold text-[#B11226]"
-        >
+        <a href="/careerbuilder" className="text-sm font-semibold text-[#B11226]">
           Try CareerBuilder →
         </a>
       </div>
 
-      {/* CARD 2 — ACADEMIC ANALYSIS */}
-      <div className="min-w-[85%] md:min-w-[60%] snap-center rounded-3xl bg-[#0F172A] text-white shadow-2xl p-8">
-        <span className="text-xs font-semibold tracking-wide text-[#F6F1E8]">
+      {/* CARD 2 */}
+      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#0F172A] text-white shadow-xl p-6">
+        <span className="text-xs font-semibold text-[#F6F1E8]">
           ACADEMIC TOOL
         </span>
 
-        <h3 className="text-2xl sm:text-3xl font-bold mt-2 mb-5">
+        <h3 className="text-2xl font-bold mt-2 mb-4">
           Academic Analysis Tool
         </h3>
 
-        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg mb-6 bg-white">
+        <div className="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-lg mb-5">
           <img
             src="/screenshots/academic-analysis-ui.png"
             alt="Academic analysis tool interface"
-            className="w-full object-cover"
+            className="w-full"
           />
         </div>
 
-        <p className="text-gray-300 mb-4 text-lg">
+        <p className="text-gray-300 mb-4">
           Generate frequency tables, correlation, regression, and ANOVA —
           without SPSS.
         </p>
 
-        <a
-          href="/analysis-tool"
-          className="inline-block text-sm font-semibold text-[#F6F1E8]"
-        >
+        <a href="/analysis-tool" className="text-sm font-semibold text-[#F6F1E8]">
           Use the Tool →
         </a>
       </div>
 
       {/* CARD 3 — COMING SOON */}
-      <div className="min-w-[85%] md:min-w-[60%] snap-center rounded-3xl bg-[#FAF7F2] shadow-2xl border border-dashed border-[#D6CEC0] p-8 flex flex-col justify-center">
-        <span className="text-xs font-semibold tracking-wide text-[#B11226]">
+      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#FAF7F2] border border-dashed border-[#D6CEC0] shadow-xl p-6">
+        <span className="text-xs font-semibold text-[#B11226]">
           COMING SOON
         </span>
 
-        <h3 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mt-3 mb-4">
-          More Problem-Solving Tools
+        <h3 className="text-2xl font-bold text-[#0F172A] mt-3 mb-4">
+          More Tools for Nigerian Workflows
         </h3>
 
-        <p className="text-gray-700 text-lg mb-4">
-          We’re actively building new tools to simplify work across education,
-          careers, and local sectors.
+        <p className="text-gray-700 mb-3">
+          We’re building tools for academic research, job readiness,
+          data handling, and everyday digital tasks Nigerians struggle with.
         </p>
 
         <p className="text-gray-600">
-          Our goal is to launch at least six Nigerian-focused tools in one year.
+          Our roadmap includes at least six focused tools within one year.
         </p>
       </div>
-
     </div>
+
+    {/* ================= DESKTOP: GRID (NO SCROLL) ================= */}
+    <div className="hidden md:grid gap-32">
+
+      {/* DESKTOP PRODUCT 1 */}
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span className="text-sm font-semibold text-[#B11226]">
+            CAREER TOOL
+          </span>
+
+          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
+            CareerBuilder
+          </h3>
+
+          <p className="text-lg text-gray-800 mb-4">
+            Build CVs, cover letters, SOPs, and mini portfolios in minutes —
+            without stress or formatting confusion.
+          </p>
+
+          <p className="text-gray-600 mb-8">
+            Designed for students and early-career professionals.
+          </p>
+
+          <a href="/careerbuilder" className="text-sm font-semibold text-[#B11226]">
+            Try CareerBuilder →
+          </a>
+        </div>
+
+        <div className="rounded-3xl bg-white border border-[#E5E0D6] shadow-2xl overflow-hidden">
+          <img src="/screenshots/careerbuilder-ui.png" alt="" />
+        </div>
+      </div>
+
+      {/* DESKTOP PRODUCT 2 */}
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="rounded-3xl bg-white border border-[#E5E0D6] shadow-2xl overflow-hidden">
+          <img src="/screenshots/academic-analysis-ui.png" alt="" />
+        </div>
+
+        <div>
+          <span className="text-sm font-semibold text-[#0F172A]">
+            ACADEMIC TOOL
+          </span>
+
+          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
+            Academic Analysis Tool
+          </h3>
+
+          <p className="text-lg text-gray-800 mb-4">
+            Generate frequency tables, correlation, regression, and ANOVA
+            instantly — without SPSS.
+          </p>
+
+          <p className="text-gray-600 mb-8">
+            Built for Nigerian academic workflows.
+          </p>
+
+          <a href="/analysis-tool" className="text-sm font-semibold text-[#B11226]">
+            Use the Tool →
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
