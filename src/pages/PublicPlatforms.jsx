@@ -1,147 +1,393 @@
 export default function PublicPlatforms() {
   return (
-    <main className="bg-[#FBF6EF]">
+    <main className="bg-[#FBF6EF] text-[#0F172A]">
 
-      {/* HERO */}
-      <section className="bg-[#0A1F44] text-white">
-        <div className="max-w-7xl mx-auto px-8 py-28 text-center">
-          <p className="text-sm uppercase tracking-widest text-red-400 mb-4 font-semibold">
-            Public Platforms Initiative
-          </p>
+     {/* ================= HERO ================= */}
+<section className="relative bg-[#0A1F44] overflow-hidden">
+  {/* Decorative gradient */}
+  <div className="absolute inset-0 bg-gradient-to-br from-[#0A1F44] via-[#0F2A5C] to-[#08162F]" />
 
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-            Building Free Digital Tools <br />
-            <span className="text-red-500">for Real-World Problems</span>
-          </h1>
+  {/* Soft image accent */}
+  <img
+    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
+    alt="People collaborating with technology"
+    className="absolute right-0 top-0 h-full w-full md:w-1/2 object-cover opacity-20"
+  />
 
-          <p className="max-w-3xl mx-auto text-lg text-gray-200 leading-relaxed">
-            Beyond client work, we design and release free web platforms that
-            solve practical challenges in education, careers, and research —
-            making powerful digital tools accessible to everyone.
-          </p>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 py-28">
+    <div className="grid md:grid-cols-2 gap-16 items-center">
+{/* COPY */}
+<div>
+  <span className="inline-block mb-5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-[#B11226] bg-white/10 rounded-full">
+    Open-Access Digital Products
+  </span>
+
+  <h1 className="text-4xl md:text-6xl font-extrabold text-[#FAF7F2] leading-tight mb-6">
+    Built for <span className="text-[#F6F1E8]">Nigerian Realities</span>
+  </h1>
+
+  <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mb-10">
+    We design and release public digital platforms that solve recurring
+    problems in education, careers, and research — intentionally built
+    without paywalls, ads, or unnecessary complexity.
+  </p>
+        {/* Proof / positioning */}
+        <div className="flex flex-wrap gap-6 text-sm text-gray-300">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            Free by design
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            Nigerian-first problems
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            Built to scale
+          </span>
         </div>
-      </section>
+      </div>
+      {/* VISUAL BLOCK */}
+      <div className="hidden md:block">
+        <div className="relative bg-[#F6F1E8] rounded-3xl p-8 shadow-2xl border border-white/10">
+          <p className="text-sm font-bold tracking-wide text-[#0F172A] mb-3">
+  What makes these platforms different
+</p>
 
-      {/* WHY SECTION */}
-      <section className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-3 gap-12">
-        <div>
-          <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
-            Why We Do This
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            We believe technology should reduce barriers, not create them.
-            These platforms are our way of contributing real value to society
-            while showcasing what thoughtful web engineering can achieve.
-          </p>
+          <ul className="space-y-4 text-[#0F172A]">
+  <li className="flex gap-3">
+    <span className="text-[#B11226] font-bold">•</span>
+    Designed from real Nigerian workflows
+  </li>
+  <li className="flex gap-3">
+    <span className="text-[#B11226] font-bold">•</span>
+    No forced upgrades or dark patterns
+  </li>
+  <li className="flex gap-3">
+    <span className="text-[#B11226] font-bold">•</span>
+    Clear interfaces, not intimidating tools
+  </li>
+  <li className="flex gap-3">
+    <span className="text-[#B11226] font-bold">•</span>
+    Built as long-term public infrastructure
+  </li>
+</ul>
+
         </div>
+      </div>
 
-        <div>
-          <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
-            How It Works
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            We identify common pain points, design complete solutions,
-            and deploy fully functional platforms — free to use, without
-            ads or forced payments.
-          </p>
+    </div>
+  </div>
+</section>
+{/* ================= WHY THIS MATTERS ================= */}
+<section className="bg-[#FBF6EF]">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
+
+    {/* INTRO */}
+    <div className="max-w-3xl mb-24">
+      <span className="inline-block mb-4 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+        Why this work matters
+      </span>
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] mb-6 leading-tight">
+        Why TechcXel Builds <br className="hidden sm:block" />
+        Public Platforms
+      </h2>
+
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        This work is not charity. It is intentional product thinking —
+        focused on reducing everyday friction, widening access, and proving
+        what thoughtful engineering can achieve when it’s built for people.
+      </p>
+    </div>
+
+    {/* CARDS */}
+    <div className="grid md:grid-cols-3 gap-10">
+
+      {/* CARD 1 — CREAM */}
+      <div className="rounded-3xl p-10 bg-[#F6F1E8] border border-[#E7E2D8] hover:shadow-xl transition">
+        <span className="block mb-4 text-sm font-semibold text-[#B11226]">
+          Access
+        </span>
+
+        <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
+          Access Over Privilege
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          Too many capable people are locked out of opportunity by cost,
+          complexity, or unnecessary gatekeeping.
+        </p>
+
+        <p className="text-sm text-gray-600 leading-relaxed">
+          We build tools that work immediately — no subscriptions,
+          no intimidation, no hidden barriers.
+        </p>
+      </div>
+
+      {/* CARD 2 — DEEP NAVY */}
+      <div className="rounded-3xl p-10 bg-[#0A1F44] text-white hover:shadow-2xl transition">
+        <span className="block mb-4 text-sm font-semibold text-[#FCA5A5]">
+          Design Philosophy
+        </span>
+
+        <h3 className="text-2xl font-bold mb-4">
+          Problem-First Design
+        </h3>
+
+        <p className="text-gray-200 leading-relaxed mb-6">
+          We don’t chase trends or buzzwords. Every platform begins with
+          a real, repeated problem we observe in Nigerian schools,
+          offices, and research spaces.
+        </p>
+
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Solutions come after understanding — not the other way around.
+        </p>
+      </div>
+
+      {/* CARD 3 — WHITE */}
+      <div className="rounded-3xl p-10 bg-white border border-gray-200 hover:shadow-xl transition">
+        <span className="block mb-4 text-sm font-semibold text-[#0F172A]">
+          Credibility
+        </span>
+
+        <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
+          Proof of Capability
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          These platforms are not demos or experiments. They are living
+          systems used by real people.
+        </p>
+
+        <p className="text-sm text-gray-600 leading-relaxed">
+          They show our engineering depth, product judgment, and ability
+          to design systems that last beyond launch.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{/* ================= PLATFORM 1 ================= */}
+<section className="relative py-36 bg-[#0A1F44] overflow-hidden">
+
+  <div className="max-w-7xl mx-auto px-6 sm:px-10">
+
+    <div className="grid md:grid-cols-2 gap-24 items-center">
+
+      {/* IMAGE — PRODUCT AS HERO */}
+      <div className="relative">
+        {/* Soft red focus glow */}
+        <div className="absolute -inset-6 rounded-[32px] bg-[#B11226]/15 blur-3xl" />
+
+        <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.45)] border border-white/10 bg-white">
+          <img
+            src="/screenshots/careerbuilder-ui.png"
+            alt="CareerBuilder platform interface"
+            className="w-full object-cover"
+          />
         </div>
+      </div>
 
-        <div>
-          <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
-            Long-Term Vision
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            We aim to launch new public platforms regularly, building a growing
-            ecosystem of tools that empower students, professionals, and communities.
-          </p>
-        </div>
-      </section>
+      {/* CONTENT */}
+      <div className="max-w-xl">
 
-      {/* PLATFORMS */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-8">
+        {/* Eyebrow */}
+        <span className="inline-block mb-6 text-xs font-semibold tracking-widest uppercase text-[#FCA5A5]">
+          Career Platform
+        </span>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A1F44] mb-14 text-center">
-            Our Public Platforms
-          </h2>
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#F6F1E8] leading-tight mb-6">
+          CareerBuilder
+        </h2>
 
-          <div className="grid md:grid-cols-2 gap-16">
+        {/* Core value */}
+        <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10">
+          CareerBuilder helps students and early-career professionals create
+          clear, professional CVs, cover letters, statements of purpose, and
+          mini portfolios — without design skills or formatting stress.
+        </p>
 
-            {/* CareerBuilder */}
-            <div className="bg-[#FBF6EF] rounded-3xl border p-8 shadow-sm">
-              <div className="rounded-2xl overflow-hidden mb-6">
-                <img
-                  src="https://my-real-final-plp-project-8q5a.vercel.app/"
-                  alt="CareerBuilder platform"
-                  className="w-full h-56 object-cover"
-                />
-              </div>
-
-              <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
-                CareerBuilder
-              </h3>
-
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                A free career development platform that helps students and
-                professionals generate CVs, SOPs, cover letters, and portfolios —
-                without needing design or writing expertise.
-              </p>
-
-              <a
-                href="https://my-real-final-plp-project-8q5a.vercel.app/"
-                className="inline-block text-red-600 font-bold hover:underline"
-              >
-                Visit Platform →
-              </a>
-            </div>
-
-            {/* Research Toolkit */}
-            <div className="bg-[#FBF6EF] rounded-3xl border p-8 shadow-sm">
-              <div className="rounded-2xl overflow-hidden mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0"
-                  alt="Research toolkit platform"
-                  className="w-full h-56 object-cover"
-                />
-              </div>
-
-              <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
-                Research Toolkit
-              </h3>
-
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                A web-based research assistant that enables students to generate
-                frequency tables, ANOVA, regression analysis, and more —
-                without relying on SPSS or complex software.
-              </p>
-
-              <a
-                href="https://social-sciences-xi.vercel.app/"
-                className="inline-block text-red-600 font-bold hover:underline"
-              >
-                Visit Platform →
-              </a>
-            </div>
-
+        {/* Key benefits */}
+        <div className="space-y-4 mb-12 text-gray-200">
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Built around Nigerian education and job markets
+          </div>
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Guided workflows that eliminate blank-page anxiety
+          </div>
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Optimised for low-end devices and unreliable networks
           </div>
         </div>
-      </section>
 
-      {/* CTA */}
-      <section className="bg-[#0A1F44] text-white py-24">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <h3 className="text-3xl font-extrabold mb-6">
-            Have an Idea That Could Help Others?
+        {/* Credibility blocks */}
+        <div className="grid sm:grid-cols-2 gap-10 mb-14">
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#FCA5A5] mb-3">
+              Technology
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Built with React, Tailwind CSS, Node.js, and scalable
+              cloud infrastructure designed for reliability.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#FCA5A5] mb-3">
+              6-Month Outlook
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Expanded templates, improved exports, and portfolio
+              hosting features tailored to local career needs.
+            </p>
+          </div>
+
+        </div>
+
+        {/* CTA */}
+        <a
+          href="https://my-real-final-plp-project-8q5a.vercel.app/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#B11226] hover:underline"
+        >
+          Visit CareerBuilder
+          <span aria-hidden>→</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{/* ================= PLATFORM 2 ================= */}
+<section className="bg-[#F6F1E8] py-36">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10">
+
+    <div className="grid md:grid-cols-2 gap-24 items-center">
+
+      {/* CONTENT */}
+      <div className="max-w-xl">
+
+        {/* Eyebrow */}
+        <span className="inline-block mb-6 text-xs font-semibold tracking-widest uppercase text-[#0A1F44]">
+          Academic Tool
+        </span>
+
+        {/* Title */}
+        <h2 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-6">
+          Academic Analysis Tool
+        </h2>
+
+        {/* Core value */}
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
+          The Academic Analysis Tool allows students to generate frequency tables,
+          correlation, regression, and ANOVA results directly in the browser —
+          without SPSS or complex statistical software.
+        </p>
+
+        {/* Key benefits */}
+        <div className="space-y-4 mb-12 text-gray-700">
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#0A1F44]" />
+            Designed for Nigerian social science workflows
+          </div>
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#0A1F44]" />
+            Removes dependency on expensive or pirated software
+          </div>
+          <div className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#0A1F44]" />
+            Outputs ready for assignments, projects, and reports
+          </div>
+        </div>
+
+        {/* Credibility blocks */}
+        <div className="grid sm:grid-cols-2 gap-10 mb-14">
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#0F172A] mb-3">
+              Technology
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Built with browser-based computation logic, structured data
+              processing, and client-side rendering for speed and clarity.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[#0F172A] mb-3">
+              6-Month Outlook
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Additional statistical tests, dataset uploads, and exportable
+              result formats tailored to academic standards.
+            </p>
+          </div>
+
+        </div>
+
+        {/* CTA */}
+        <a
+          href="https://social-sciences-xi.vercel.app/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#B11226] hover:underline"
+        >
+          Visit Analysis Tool
+          <span aria-hidden>→</span>
+        </a>
+
+      </div>
+
+      {/* IMAGE — PRODUCT SURFACE */}
+      <div className="relative">
+
+        {/* Subtle depth frame */}
+        <div className="absolute -inset-4 rounded-3xl bg-white/60 border border-[#E7E2D8]" />
+
+        <div className="relative rounded-2xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.18)] bg-white">
+          <img
+            src="/screenshots/academic-analysis-ui.png"
+            alt="Academic analysis tool interface"
+            className="w-full object-cover"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      {/* ================= FUTURE VISION ================= */}
+      <section className="bg-[#0A1F44] text-white py-28">
+        <div className="max-w-4xl mx-auto px-6 sm:px-10 text-center">
+          <h3 className="text-3xl md:text-4xl font-extrabold mb-6">
+            What Comes Next
           </h3>
 
-          <p className="text-lg text-gray-200 mb-10">
-            If you see a recurring problem in education, research, or community
-            workflows, we’d love to explore building a public platform around it.
+          <p className="text-lg text-gray-200 mb-8">
+            Our goal is to build at least six open-access digital products
+            within one year — each addressing a clear Nigerian pain point.
+          </p>
+
+          <p className="text-gray-300 mb-10">
+            These platforms will continue to evolve based on real usage,
+            feedback, and emerging needs across education and work.
           </p>
 
           <a
             href="/contact"
-            className="inline-block bg-red-600 text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-red-700 transition"
+            className="inline-block bg-[#B11226] px-10 py-4 rounded-xl font-semibold hover:bg-red-700 transition"
           >
             Suggest a Platform Idea
           </a>

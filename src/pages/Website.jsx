@@ -2,44 +2,86 @@ import React from "react";
 import Footer from "../components/common/Footer";
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 export default function Website() {
+  const navigate = useNavigate();
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="w-full min-h-screen bg-[#0B1C2D]">
-        <div className="grid md:grid-cols-2 min-h-screen">
+      {/* ================= HERO SECTION ================= */}
+<section
+      className="
+        relative
+        h-[70vh]
+        min-h-[520px]
+        md:h-[85vh]
+        md:min-h-[620px]
+        overflow-hidden
+      "
+    >
+      {/* BACKGROUND IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2 }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80)",
+        }}
+      />
 
-          {/* LEFT SIDE — IMAGE */}
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-              alt="Web developer working on computer"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-[#0B1C2D]/40"></div>
+      {/* GRADIENT BLEND */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#08162F]/85 via-[#0A1F44]/80 to-[#08162F]/90" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 h-full flex items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          {/* Eyebrow */}
+          <p className="text-[#B11226] font-bold uppercase tracking-wide mb-4">
+            Web Design & Digital Solutions
+          </p>
+
+          {/* Heading */}
+          <h1 className="font-extrabold leading-tight mb-6 text-[#FAF7F2] text-4xl sm:text-5xl md:text-6xl">
+            Websites built to work,
+            <br />
+            not just to exist.
+          </h1>
+
+          {/* Description */}
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-xl mb-10 leading-relaxed">
+            We design and build modern websites and digital platforms that help
+            businesses, startups, and institutions communicate clearly, scale
+            confidently, and convert users into outcomes.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-6">
+            <button
+              onClick={() => navigate("/website")}
+              className="bg-[#B11226] text-white px-8 py-4 rounded-full text-sm md:text-base font-bold hover:bg-red-700 transition"
+            >
+              Start a Project
+            </button>
+
+            <button
+              onClick={() => navigate("/contact")}
+              className="text-[#FAF7F2] font-semibold hover:underline"
+            >
+              Book a Discovery Call →
+            </button>
           </div>
+        </motion.div>
+      </div>
+    </section>
 
-          {/* RIGHT SIDE — CONTENT */}
-          <div className="flex items-center px-10 md:px-16 lg:px-20">
-            <div className="max-w-lg">
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                Web Design company <br />
-                with a mint of creativity
-              </h1>
-
-              <p className="text-gray-300 leading-relaxed mb-8">
-                Powerful websites that help you easily, effectively, and
-                affordably grow your business. We design with purpose,
-                clarity, and long-term value in mind.
-              </p>
-
-              <button className="bg-[#B11226] hover:bg-[#8F0E1E] transition text-white px-7 py-3 rounded-md text-sm font-medium">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
 {/* E-COMMERCE SECTION */}
 <section className="bg-gray-50 py-24">

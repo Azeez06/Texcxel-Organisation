@@ -5,34 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {useNavigate} from "react-router-dom";
 /* SLIDES DATA */
 const slides = [
- {
-  id: 1,
-  eyebrow: "Digital solutions with purpose",
-  title: "TechcXel",
-  description:
-    "Designing, building, and scaling digital experiences that move people and institutions forward.",
-  image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80"
-,
-},
-
-  {
-    id: 2,
-    eyebrow: "Creativity meets technology",
-    title: "Design that\ncommunicates clearly",
-    description:
-      "From branding to digital products, we create visuals that build trust and credibility.",
-    image:
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: 3,
-    eyebrow: "Modern development",
-    title: "Websites built\nfor performance",
-    description:
-      "Clean, scalable, and modern websites engineered for speed, usability, and growth.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
-  },
   {
     id: 4,
     eyebrow: "Technology for people",
@@ -42,7 +14,17 @@ const slides = [
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
   },
+  {
+    id: 2,
+    eyebrow: "Creativity meets technology",
+    title: "Design that\ncommunicates clearly",
+    description:
+      "From branding to digital products, we create visuals that build trust and credibility.",
+    image:
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=1600&q=80",
+  },
 ];
+
 
 export default function HeroSlider() {
   const navigate = useNavigate();
@@ -79,9 +61,8 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* DARK GRADIENT OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#08162F]/95 via-[#0A1F44]/85 to-[#08162F]/40" />
-
-      {/* CONTENT */}
+     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+  {/* CONTENT */}
       <div
   className="
     relative z-10

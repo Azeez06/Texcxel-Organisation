@@ -2,19 +2,82 @@ import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 import HeroSlider from "../components/home/HeroSlider";
 import { motion, AnimatePresence } from "framer-motion";
-import { Clock, TrendingUp, UserPlus } from "lucide-react";
+import { Clock, TrendingUp, UserPlus, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const services = [ { title: "Website Design & Development", text: "We design and build clean, responsive, and scalable websites tailored to your goals. From landing pages to full web applications, our solutions prioritize usability, performance, and long-term growth.", link: "/website", }, 
-  { title: "Brand & Graphic Design", text: "We create logos, brand identities, and visual systems that communicate clearly and consistently. Our designs help businesses build trust, recognition, and a strong digital presence.", }, 
-  { title: "Learning & Training", text: "We teach practical website design and development skills through structured training and mentorship. Our focus is hands-on learning that prepares individuals for real-world projects.", link: "/internship", }, 
-  { title: "AI & System Integration", text: "We integrate AI tools, chatbots, payment gateways, and automation systems into websites to improve efficiency, user experience, and business operations.",link: "/ai-integration" }, 
-  { title: "Website Design Internship", text: "Our internship program provides aspiring designers and developers with real project experience, guidance, and exposure to modern tools and workflows in web design and development.", }, 
-  { title: "Public-Good Web Platforms", text: "We design and build free web tools that solve real problems in diverse sectors. These platforms are open for public use, created to help students, professionals, and communities access to digital solutions", link: "/public-platforms" },
+const services = [
+  {
+    title: "You Need Websites That Actually Work",
+    text: "Many websites look good but fail to deliver results. TechcXel builds clean, scalable websites that are easy to use, fast to load, and designed to support real growth — not just online presence.",
+    link: "/website",
+  },
+  {
+    title: "You Need Clear, Trustworthy Branding",
+    text: "Inconsistent visuals and weak design reduce credibility. We help you communicate clearly through strong brand identities and graphics that build trust and recognition across digital platforms.",
+  },
+  {
+    title: "You Need Skills That Go Beyond Theory",
+    text: "Learning tech shouldn’t stop at tutorials. TechcXel focuses on hands-on training and mentorship that prepares you to work on real projects with confidence.",
+    link: "/internship",
+  },
+  {
+    title: "You Need Systems That Save Time and Effort",
+    text: "Manual processes slow teams down. We integrate AI tools, automation, and smart systems that improve efficiency, streamline workflows, and enhance user experience.",
+    link: "/ai-integration",
+  },
+  {
+    title: "You Need Real Project Experience",
+    text: "Experience matters more than certificates. Our internship structure exposes learners to real-world design and development workflows, helping them build confidence and practical competence.",
+  },
+  {
+    title: "You Need Tools That Solve Public Problems",
+    text: "Access to useful digital tools shouldn’t be limited. TechcXel builds free public-good platforms that help students, professionals, and communities solve everyday challenge.",
+    link: "/public-platforms",
+  },
 ];
+
 export default function Home() {
+  const cards = ["career", "academic", "coming"];
+const [activeCard, setActiveCard] = useState(0);
+const [visible, setVisible] = useState(true);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setVisible(false);
+
+    setTimeout(() => {
+      setActiveCard((prev) => (prev + 1) % cards.length);
+      setVisible(true);
+    }, 400);
+  }, 4000);
+
+  return () => clearInterval(interval);
+}, []);
+
+  const messages = [
+  "Academic research and data analysis tools",
+  "Career, CV, and job-readiness platforms",
+  "Everyday digital tools built for Nigerian workflows",
+];
+
+const [activeIndex, setActiveIndex] = useState(0);
+const [fade, setFade] = useState(true);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setFade(false);
+
+    setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % messages.length);
+      setFade(true);
+    }, 300);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
   const quotes =[
   {
     text: "Technology is best when it brings people together.",
@@ -161,10 +224,8 @@ export default function Home() {
 </section>
  <HeroSlider />
   
-  <section className="bg-gradient-to-b from-[#FAF7F2] to-[#F6F1E8] border-t border-gray-200">
- <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-13 sm:pt-24 lg:pt-32 pb-24">
-
-
+<section className="bg-gradient-to-b from-[#FAF7F2] to-[#F6F1E8] border-t border-gray-200">
+<div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-13 sm:pt-24 lg:pt-32 pb-24">
     {/* SECTION HEADER */}
   <div className="text-center mb-8 sm:mb-12">
 
@@ -181,56 +242,29 @@ export default function Home() {
 create digital platforms, and develop tech talent for Nigerian realities.
   </p>
 </div>
-
-
     {/* CARDS */}
     <div className="grid md:grid-cols-3 gap-10">
 
-      {/* INTERNSHIP — LEARNING & GROWTH */}
-      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#ECF5EE] border border-[#CFE6D8] shadow-sm hover:shadow-lg transition min-h-[540px]">
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-          alt="People learning together"
-          className="h-52 w-full object-cover"
-        />
-
-        <div className="p-8 flex flex-col justify-between flex-1">
-          <div>
-            <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
-              Tech Skill Training
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              We train students and career-switchers in web design and development through
-real projects, mentorship, and guided practice that is beyound tutorials.
-            </p>
-          </div>
-
-          <Link to="/internship" className="mt-10 text-sm font-semibold text-[#2F7D4E] hover:underline cursor-pointer">
-           Explore Training →
-          </Link>
-        </div>
-      </div>
-
       {/* BUILD WITH US — TRUST & PROFESSIONALISM */}
       <div className="flex flex-col rounded-2xl overflow-hidden bg-[#0F172A] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
+        
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
           alt="Team discussion and planning"
-          className="h-52 w-full object-cover opacity-90"
-        />
+         className="h-56 w-full object-cover brightness-[0.97]"
 
+        />
         <div className="p-8 flex flex-col justify-between flex-1">
           <div>
             <h3 className="text-2xl font-bold mb-4">
-             Website & Platform Development
+            Tech Services & Digital Solutions
             </h3>
             <p className="text-gray-300 leading-relaxed">
-             We design and build custom websites and digital platforms for startups, NGOs,
-and growing organisations — tailored to real goals, not templates.
+            We help individuals, startups, and organisations design, build, test, and scale digital products. This ranges from websites and payment integrations to backend systems, AI features, and platform optimisation.
             </p>
           </div>
-
-          <button className="mt-10 self-start text-sm font-semibold text-white border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#0F172A] transition">
+          <button onClick={ () => navigate("/website")}
+          className="mt-10 self-start text-sm font-semibold text-white border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#0F172A] transition">
           Book a Discovery Call
           </button>
         </div>
@@ -239,206 +273,81 @@ and growing organisations — tailored to real goals, not templates.
       {/* PROBLEM SOLVERS — IMPACT & PURPOSE */}
       <div className="flex flex-col rounded-2xl overflow-hidden bg-[#B11226] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
         <img
-          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+          src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg"
           alt="Community using technology"
-          className="h-52 w-full object-cover opacity-95"
+         className="h-56 w-full object-cover brightness-[0.97]"
+
         />
 
         <div className="p-8 flex flex-col justify-between flex-1">
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Free Digital Tools
+     Open-Access Digital Products
             </h3>
             <p className="text-gray-100 leading-relaxed">
-              We build free, web-based tools that solve real problems in education,
-career development, and local sectors — designed for Nigerian users.
+    We build and release free web products that address local challenges from education to productivity and community needs. Our products are designed to be accessible, practical, and impactful.
             </p>
           </div>
 
-          <button className="mt-10 self-start text-sm font-semibold bg-white text-[#B11226] px-5 py-2 rounded-md hover:bg-gray-100 transition">
+          <button onClick={ () => navigate("/public-platforms")}
+          className="mt-10 self-start text-sm font-semibold bg-white text-[#B11226] px-5 py-2 rounded-md hover:bg-gray-100 transition">
           Explore Our Tools
           </button>
-        </div>
+        </div>        
       </div>
+{/* INTERNSHIP — LEARNING & GROWTH */}
+      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#ECF5EE] border border-[#D6EBDD]
+shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]
+hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
 
+  <img
+    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    alt="People learning together"
+    className="h-56 w-full object-cover brightness-[0.97]"
+  />
+
+  <div className="p-8 flex flex-col justify-between flex-1">
+    <div>
+      <h3 className="text-2xl font-bold tracking-tight text-[#0F172A] mb-4">
+        Growing Tech Talent
+      </h3>
+
+      <p className="text-[15.5px] leading-7 text-gray-700">
+        We grow designers and developers through hands-on training, mentorship,
+        and real-world projects. This help people build practical tech skills
+        that translate into real solutions, not just certificates.
+      </p>
     </div>
 
+    <Link
+      to="/internship"
+      className="group mt-10 inline-flex items-center gap-1 text-sm font-semibold text-[#2F7D4E]"
+    >
+      Explore Training
+      <span className="group-hover:translate-x-1 transition-transform">→</span>
+    </Link>
   </div>
-</section>
-<section className="bg-[#FAF7F2] border-t border-[#E7E2D8]">
-  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-24">
-
-    {/* HEADER */}
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-4">
-        Flagship Tools Built by{" "}
-        <span>
-          <span className="text-[#B11226]">Tech</span>
-          <span className="text-[#0F172A]">cXel</span>
-        </span>
-      </h2>
-
-      <p className="text-lg text-gray-700">
-        Practical web tools designed to solve real Nigerian problems.
-      </p>
-
-      <p className="mt-3 text-sm text-gray-500 md:hidden">
-        Swipe to explore →
-      </p>
-    </div>
-
-    {/* ================= MOBILE: HORIZONTAL SCROLL ================= */}
-    <div className="md:hidden flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6">
-
-      {/* CARD 1 */}
-      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#FAF7F2] border border-[#E5E0D6] shadow-xl p-6">
-        <span className="text-xs font-semibold text-[#B11226]">
-          CAREER TOOL
-        </span>
-
-        <h3 className="text-2xl font-bold text-[#0F172A] mt-2 mb-4">
-          CareerBuilder
-        </h3>
-
-        <div className="rounded-2xl overflow-hidden border border-[#E5E0D6] bg-white shadow-lg mb-5">
-          <img
-            src="/screenshots/careerbuilder-ui.png"
-            alt="CareerBuilder interface"
-            className="w-full"
-          />
-        </div>
-
-        <p className="text-gray-700 mb-4">
-          Build CVs, cover letters, SOPs, and mini portfolios in minutes —
-          without formatting stress.
-        </p>
-
-        <a href="/careerbuilder" className="text-sm font-semibold text-[#B11226]">
-          Try CareerBuilder →
-        </a>
-      </div>
-
-      {/* CARD 2 */}
-      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#0F172A] text-white shadow-xl p-6">
-        <span className="text-xs font-semibold text-[#F6F1E8]">
-          ACADEMIC TOOL
-        </span>
-
-        <h3 className="text-2xl font-bold mt-2 mb-4">
-          Academic Analysis Tool
-        </h3>
-
-        <div className="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-lg mb-5">
-          <img
-            src="/screenshots/academic-analysis-ui.png"
-            alt="Academic analysis tool interface"
-            className="w-full"
-          />
-        </div>
-
-        <p className="text-gray-300 mb-4">
-          Generate frequency tables, correlation, regression, and ANOVA —
-          without SPSS.
-        </p>
-
-        <a href="/analysis-tool" className="text-sm font-semibold text-[#F6F1E8]">
-          Use the Tool →
-        </a>
-      </div>
-
-      {/* CARD 3 — COMING SOON */}
-      <div className="snap-center flex-shrink-0 w-[calc(100vw-3rem)] rounded-3xl bg-[#FAF7F2] border border-dashed border-[#D6CEC0] shadow-xl p-6">
-        <span className="text-xs font-semibold text-[#B11226]">
-          COMING SOON
-        </span>
-
-        <h3 className="text-2xl font-bold text-[#0F172A] mt-3 mb-4">
-          More Tools for Nigerian Workflows
-        </h3>
-
-        <p className="text-gray-700 mb-3">
-          We’re building tools for academic research, job readiness,
-          data handling, and everyday digital tasks Nigerians struggle with.
-        </p>
-
-        <p className="text-gray-600">
-          Our roadmap includes at least six focused tools within one year.
-        </p>
-      </div>
-    </div>
-
-    {/* ================= DESKTOP: GRID (NO SCROLL) ================= */}
-    <div className="hidden md:grid gap-32">
-
-      {/* DESKTOP PRODUCT 1 */}
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <span className="text-sm font-semibold text-[#B11226]">
-            CAREER TOOL
-          </span>
-
-          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
-            CareerBuilder
-          </h3>
-
-          <p className="text-lg text-gray-800 mb-4">
-            Build CVs, cover letters, SOPs, and mini portfolios in minutes —
-            without stress or formatting confusion.
-          </p>
-
-          <p className="text-gray-600 mb-8">
-            Designed for students and early-career professionals.
-          </p>
-
-          <a href="/careerbuilder" className="text-sm font-semibold text-[#B11226]">
-            Try CareerBuilder →
-          </a>
-        </div>
-
-        <div className="rounded-3xl bg-white border border-[#E5E0D6] shadow-2xl overflow-hidden">
-          <img src="/screenshots/careerbuilder-ui.png" alt="" />
-        </div>
-      </div>
-
-      {/* DESKTOP PRODUCT 2 */}
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div className="rounded-3xl bg-white border border-[#E5E0D6] shadow-2xl overflow-hidden">
-          <img src="/screenshots/academic-analysis-ui.png" alt="" />
-        </div>
-
-        <div>
-          <span className="text-sm font-semibold text-[#0F172A]">
-            ACADEMIC TOOL
-          </span>
-
-          <h3 className="text-3xl font-bold text-[#0F172A] mt-3 mb-5">
-            Academic Analysis Tool
-          </h3>
-
-          <p className="text-lg text-gray-800 mb-4">
-            Generate frequency tables, correlation, regression, and ANOVA
-            instantly — without SPSS.
-          </p>
-
-          <p className="text-gray-600 mb-8">
-            Built for Nigerian academic workflows.
-          </p>
-
-          <a href="/analysis-tool" className="text-sm font-semibold text-[#B11226]">
-            Use the Tool →
-          </a>
-        </div>
-      </div>
+</div>
     </div>
 
   </div>
 </section>
 
 
+<section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
+  
+<div className="max-w-7xl mx-auto px-10 py-28">
+{/* HEADER */} 
+<div className="max-w-2xl mx-auto mb-14 text-center">
+  <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3">
+    Why You Need{" "}
+    <span className="text-[#B11226]">Us</span>
+  
+  </h1>
 
+</div>
 
-  <section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
-    <div className="max-w-7xl mx-auto px-10 py-28"> {/* HEADER */} <div className="max-w-2xl mx-auto mb-14 text-center"> <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3"> Digital <span className="text-[#B11226]">&amp;</span> Futures </h1> <h2 className="text-xl md:text-2xl font-bold text-[#0F172A]"> World-class experiences shaped by design and technology </h2> </div>
 
     {/* CARDS */}
     <div className="grid md:grid-cols-3 gap-6">
@@ -478,98 +387,88 @@ career development, and local sectors — designed for Nigerian users.
   </div>
 </section>
 
-
 <section className="bg-[#FAF7F2] border-t border-gray-200">
-  <div className="max-w-7xl mx-auto px-10 py-28">
-    {/* WRAP GRID IN RELATIVE CONTAINER */}
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-28">
+
     <div className="relative">
- <div className="absolute left-1/2 -translate-x-1/2 -top-8 md:-top-10 z-20">
-  <h2
-    className="
-      font-extrabold tracking-tight whitespace-nowrap
-      text-2xl sm:text-3xl
-      md:text-6xl
-      text-center
-    "
-  >
-    <span className="text-red-600">Tech</span>
-    <span className="text-[#0A1F44]">cXel</span>
-    <span className="text-[#0A1F44] ml-2 md:ml-4">
-      Philosophy
-    </span>
-  </h2>
-</div>
 
+      {/* SECTION TITLE */}
+      <div className="absolute left-1/2 -translate-x-1/2 -top-10 z-20">
+        <h2 className="font-extrabold tracking-tight whitespace-nowrap text-2xl sm:text-3xl md:text-6xl text-center">
+          <span className="text-[#B11226]">Tech</span>
+          <span className="text-[#0A1F44]">cXel</span>
+          <span className="text-[#0A1F44] ml-2 md:ml-4">
+            Philosophy
+          </span>
+        </h2>
+      </div>
 
-
-      {/* Add top padding so content sits under the overlay */}
-      <div className="grid md:grid-cols-2 gap-8 items-center pt-12">
+      {/* CONTENT */}
+      <div className="grid md:grid-cols-2 gap-14 items-center pt-16">
 
         {/* IMAGE */}
         <img
           src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
-          alt="Engineer coding at a workstation"
-          className="w-full h-[600px] object-cover object-top rounded-2xl"
+          alt="Young people learning and building with technology"
+          className="w-full h-[560px] object-cover rounded-3xl"
         />
 
         {/* TEXT */}
         <div className="space-y-10">
 
-          {/* remove old title */}
-          <p className="text-lg text-gray-700 font-semibold leading-relaxed">
-            We believe technology should simplify life, not complicate it.
-            We design systems that are easy to understand, useful to people,
-            and grounded in real-world impact.
-          </p>
+          {/* CORE BELIEF */}
+          <div>
+            <p className="text-2xl font-bold text-[#0A1F44] leading-snug mb-4">
+              Nigeria doesn’t lack talent.
+              <br />
+              It lacks accessible tools and practical learning.
+            </p>
 
-          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              TechcXel exists to close that gap — by building digital tools that
+              solve real problems and by teaching technology in a way that is
+              practical, grounded, and usable.
+            </p>
+          </div>
+
+          {/* VALUES */}
+          <div className="border-l-4 border-[#B11226] pl-6">
+            <p className="text-gray-700 leading-relaxed">
+              We believe technology should simplify life, not complicate it.
+              Every system we design is guided by clarity, usefulness, and
+              real-world impact — not hype.
+            </p>
+          </div>
+
+          {/* DIRECTION */}
+          <div className="grid sm:grid-cols-2 gap-6">
 
             <div>
-              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-                Core Values
+              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-2">
+                What We’re Doing Now
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Clarity over complexity. Impact over hype. Every design choice
-                is guided by usefulness and integrity.
+                Building and refining focused digital tools while training
+                people to use and build technology confidently.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-                Our Mission
+              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-2">
+                Where We’re Going
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                To create digital solutions and learning platforms that address
-                real problems for people and organizations.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-            Our Short Term Goals
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                 To launch and refine digital solutions that meet current market needs,
-  strengthen our portfolio, and establish Texcel as a credible technology partner.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-[#0A1F44] mb-2">
-                Our Long Term Goals
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                To consistently design and deploy long-lasting digital solutions that drive growth,
-  improve access, and create measurable value for people and organizations.
+                Creating long-lasting digital solutions that improve access,
+                productivity, and opportunity across Nigerian sectors.
               </p>
             </div>
 
           </div>
+
         </div>
-
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
@@ -685,167 +584,137 @@ career development, and local sectors — designed for Nigerian users.
 </section>
 
 
-<section className="bg-gradient-to-b from-[#FAF7F2] to-[#F6F1E8] border-t border-gray-200">
-  <div className="max-w-7xl mx-auto px-10 py-32">
+<section className="bg-white py-24">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    
+    {/* Title */}
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-16 text-[#0F172A]">
+      Who We Work With
+    </h2>
 
-    {/* SECTION HEADER */}
-   <div className="text-center mb-12">
-  <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-3">
-   What We Build at Techcxel
-  </h2>
-  <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-    Techcxel operates across three focused pillars — building practical tools,
-creating digital platforms, and developing tech talent for Nigerian realities.
-  </p>
-</div>
-
-
-    {/* CARDS */}
-    <div className="grid md:grid-cols-3 gap-10">
-
-      {/* INTERNSHIP — LEARNING & GROWTH */}
-      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#ECF5EE] border border-[#CFE6D8] shadow-sm hover:shadow-lg transition min-h-[540px]">
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-          alt="People learning together"
-          className="h-52 w-full object-cover"
-        />
-
-        <div className="p-8 flex flex-col justify-between flex-1">
-          <div>
-            <h3 className="text-2xl font-bold text-[#0F172A] mb-4">
-              Tech Skill Training
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              We train students and career-switchers in web design and development through
-real projects, mentorship, and guided practice that is beyound tutorials.
-            </p>
-          </div>
-
-          <Link to="/internship" className="mt-10 text-sm font-semibold text-[#2F7D4E] hover:underline cursor-pointer">
-           Explore Training →
-          </Link>
-        </div>
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+      
+      {/* Students */}
+      <div className="flex flex-col items-center">
+        <UserPlus className="w-11 h-11 text-[#B11226] mb-4" />
+        <h3 className="font-bold text-lg mb-3 text-[#0F172A]">
+          Students
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+          Students who need practical tools for academics, career preparation,
+          and hands-on learning beyond theory.
+        </p>
       </div>
 
-      {/* BUILD WITH US — TRUST & PROFESSIONALISM */}
-      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#0F172A] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
-        <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-          alt="Team discussion and planning"
-          className="h-52 w-full object-cover opacity-90"
-        />
-
-        <div className="p-8 flex flex-col justify-between flex-1">
-          <div>
-            <h3 className="text-2xl font-bold mb-4">
-             Website & Platform Development
-            </h3>
-            <p className="text-gray-300 leading-relaxed">
-             We design and build custom websites and digital platforms for startups, NGOs,
-and growing organisations — tailored to real goals, not templates.
-            </p>
-          </div>
-
-          <button className="mt-10 self-start text-sm font-semibold text-white border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#0F172A] transition">
-          Book a Discovery Call
-          </button>
-        </div>
+      {/* Startups */}
+      <div className="flex flex-col items-center">
+        <TrendingUp className="w-11 h-11 text-[#B11226] mb-4" />
+        <h3 className="font-bold text-lg mb-3 text-[#0F172A]">
+          Startups
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+          Early-stage and growing startups looking to build functional websites
+          and digital platforms that support real business goals.
+        </p>
       </div>
 
-      {/* PROBLEM SOLVERS — IMPACT & PURPOSE */}
-      <div className="flex flex-col rounded-2xl overflow-hidden bg-[#B11226] text-white shadow-md hover:shadow-xl transition min-h-[540px]">
-        <img
-          src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
-          alt="Community using technology"
-          className="h-52 w-full object-cover opacity-95"
-        />
-
-        <div className="p-8 flex flex-col justify-between flex-1">
-          <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Free Digital Tools
-            </h3>
-            <p className="text-gray-100 leading-relaxed">
-              We build free, web-based tools that solve real problems in education,
-career development, and local sectors — designed for Nigerian users.
-            </p>
-          </div>
-
-          <button className="mt-10 self-start text-sm font-semibold bg-white text-[#B11226] px-5 py-2 rounded-md hover:bg-gray-100 transition">
-          Explore Our Tools
-          </button>
-        </div>
+      {/* NGOs */}
+      <div className="flex flex-col items-center">
+        <Clock className="w-11 h-11 text-[#B11226] mb-4" />
+        <h3 className="font-bold text-lg mb-3 text-[#0F172A]">
+          NGOs
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+          Non-profit organizations seeking clear, accessible digital solutions
+          to communicate impact and manage their initiatives.
+        </p>
       </div>
+
+      {/* Institutions */}
+      <div className="flex flex-col items-center">
+        <Building2 className="w-11 h-11 text-[#B11226] mb-4" />
+        <h3 className="font-bold text-lg mb-3 text-[#0F172A]">
+          Institutions
+        </h3>
+        <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+          Schools, associations, and public institutions that require reliable
+          digital systems tailored to their operational needs.
+        </p>
+      </div>
+
+    </div>
+
+    {/* Button */}
+    <div className="mt-20">
+      <button
+        onClick={() => setIsOpen(true)}
+        className="border-2 border-[#B11226] text-[#B11226] px-10 py-3 font-semibold rounded-md
+                   hover:bg-[#B11226] hover:text-white transition"
+      >
+        Start a Conversation
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section className="bg-[#FAF7F2] border-t border-[#E7E2D8] py-24">
+  <div className="max-w-5xl mx-auto px-6 text-center">
+
+    {/* Heading */}
+    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F172A] mb-6">
+      How would you like to engage with{" "}
+      <span>
+        <span className="text-[#B11226]">Tech</span>
+        <span className="text-[#0F172A]">cXel</span>
+      </span>
+      ?
+    </h2>
+
+    <p className="text-gray-700 max-w-2xl mx-auto mb-14">
+      Choose the option that best matches your goal. We’ll take it from there.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+
+      {/* Student */}
+      <a
+        href="/tools"
+        className="px-8 py-4 text-sm font-semibold rounded-lg
+                   bg-white text-[#0F172A] border border-[#E5E0D6]
+                   hover:bg-gray-50 transition"
+      >
+        I’m a Student
+      </a>
+
+      {/* Website */}
+      <a
+        href="/studio"
+        className="px-8 py-4 text-sm font-semibold rounded-lg
+                   border-2 border-[#0F172A] text-[#0F172A]
+                   hover:bg-[#0F172A] hover:text-white transition"
+      >
+        I Need a Website
+      </a>
+
+      {/* Learn Tech */}
+      <a
+        href="/academy"
+        className="px-8 py-4 text-sm font-semibold rounded-lg
+                   bg-[#B11226] text-white
+                   hover:bg-red-700 transition"
+      >
+        I Want to Learn Tech
+      </a>
 
     </div>
 
   </div>
 </section>
 
- <section className="bg-white py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-16">
-          WHY WORK WITH US?
-        </h2>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          
-          {/* Item 1 */}
-          <div className="flex flex-col items-center">
-            <Clock className="w-12 h-12 text-red-600 mb-4" />
-            <h3 className="font-bold text-lg mb-3">
-              Quick and <span className="text-red-600">easy</span>
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-              No more projects that run for months with no result in sight.
-              Our process is optimized so you won’t waste time or costs.
-            </p>
-          </div>
-
-          {/* Item 2 */}
-          <div className="flex flex-col items-center">
-            <TrendingUp className="w-12 h-12 text-red-600 mb-4" />
-            <h3 className="font-bold text-lg mb-3">
-              Grow your <span className="text-red-600">revenue</span>
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-              Forget about websites or designs that just sit there.
-              Our work is result-driven, increasing your revenue by
-              optimizing conversions.
-            </p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="flex flex-col items-center">
-            <UserPlus className="w-12 h-12 text-red-600 mb-4" />
-            <h3 className="font-bold text-lg mb-3">
-              Get the right <span className="text-red-600">clients</span>
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-              We outline your business information in a clear and
-              professional way, leaving you with the clients you want
-              (and deserve).
-            </p>
-          </div>
-
-        </div>
-
-        {/* Button */}
-        <div className="mt-16">
-         <button
-  onClick={() => setIsOpen(true)}
-  className="border-2 border-red-600 text-red-600 px-10 py-3 font-semibold hover:bg-red-600 hover:text-white transition"
->
-  REQUEST A QUOTE
-</button>
-        </div>
-
-      </div>
-    </section>
     {/* MODAL — OUTSIDE THE SECTION */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
