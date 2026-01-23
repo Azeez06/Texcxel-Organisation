@@ -3,8 +3,12 @@ import Footer from "../components/common/Footer";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 export default function Website() {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       {/* ================= HERO SECTION ================= */}
@@ -231,8 +235,7 @@ export default function Website() {
       </h2>
 
       <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-        Once direction is clear, we engineer, test, and deploy systems that
-        perform consistently under real-world usage.
+        Once direction is clear, we engineer, test, and deploy systems that        perform consistently under real-world usage.
       </p>
     </div>
 
@@ -354,12 +357,13 @@ export default function Website() {
         Delivery is where strategy becomes reality.
       </p>
 
-      <a
-        href="/contact"
-        className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#B11226] text-white text-sm font-semibold hover:bg-[#8F0E1E] transition"
-      >
-        Discuss Your Project
-      </a>
+     <button
+  onClick={() => setOpen(true)}
+  className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#B11226] text-white text-sm font-semibold hover:bg-[#8F0E1E] transition"
+>
+  Discuss Your Project
+</button>
+
     </div>
 
   </div>
@@ -636,6 +640,40 @@ export default function Website() {
 
   </div>
 </section>
+{open && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    
+    <div className="bg-white rounded-2xl p-6 max-w-sm w-full mx-4 text-center">
+      <h3 className="text-lg font-bold text-[#0A1F44] mb-3">
+        Continue to WhatsApp
+      </h3>
+
+      <p className="text-sm text-gray-600 mb-6">
+        You’ll be redirected to WhatsApp to send us a message about your project.
+      </p>
+
+      <div className="flex gap-4">
+        <button
+          onClick={() => setOpen(false)}
+          className="flex-1 px-4 py-2 rounded-lg border text-sm font-semibold text-gray-600 hover:bg-gray-100"
+        >
+          Cancel
+        </button>
+
+        <a
+          href="https://wa.me/2348133546108?text=Hello%2C%20my%20name%20is%20____.%20I%20found%20TechcXel%20and%20would%20like%20to%20discuss%20a%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 px-4 py-2 rounded-lg bg-[#B11226] text-white text-sm font-semibold hover:bg-[#8F0E1E]"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+
+  </div>
+)}
+
       <Footer />
     </>
   );

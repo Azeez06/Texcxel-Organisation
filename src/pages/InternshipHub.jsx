@@ -8,7 +8,7 @@ const programs = [
     category: "Frontend",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     description:
-      "Learn HTML, CSS, JavaScript, React, and UI/UX best practices to build modern, responsive interfaces.",
+      "A hands-on programme focused on building user-facing web applications. Learn to translate designs into responsive, accessible interfaces using modern frontend tools and best practices.",
     route: "frontend",
   },
   {
@@ -17,7 +17,7 @@ const programs = [
     category: "Backend",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
     description:
-      "Master server-side development, databases, APIs, and application logic using modern backend tools.",
+      "A practical backend track designed to help you build and manage server-side systems. Learn how to work with data, APIs, and application logic that power real-world platforms.",
     route: "backend",
   },
   {
@@ -26,7 +26,7 @@ const programs = [
     category: "Fullstack",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     description:
-      "Become a complete developer by learning both frontend and backend technologies with real-world projects.",
+      "An immersive programme for aspiring fullstack developers. Gain end-to-end development skills by working across frontend and backend technologies on real-world projects.",
     route: "fullstack",
   },
 ];
@@ -47,11 +47,14 @@ export default function InternshipHub() {
         {/* HEADER */}
         <div className="mb-20">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#08162F] mb-6">
-            Internship Programmes
+            Growing Industry-Ready Tech Talent
           </h1>
-          <p className="text-gray-700 max-w-2xl">
-            Choose a focused internship track designed to equip you with
-            real-world experience and industry-ready skills.
+
+          <p className="text-gray-700 max-w-2xl leading-relaxed">
+            Our internship programmes are designed as a practical solution to
+            the growing skills gap in tech. We train aspiring developers through
+            structured learning, hands-on projects, and real-world workflows
+            that prepare them for modern technology roles.
           </p>
         </div>
 
@@ -60,7 +63,7 @@ export default function InternshipHub() {
           {/* FILTER */}
           <aside className="lg:col-span-1">
             <p className="text-sm font-semibold text-[#08162F] mb-5 uppercase tracking-wide">
-              Filter by Track
+              Choose a Learning Path
             </p>
 
             <div className="flex flex-col gap-3">
@@ -95,7 +98,7 @@ export default function InternshipHub() {
                   className="h-48 w-full object-cover"
                 />
 
-                <div className="p-6 flex flex-col justify-between min-h-[250px]">
+                <div className="p-6 flex flex-col justify-between min-h-[260px]">
                   <div>
                     <span className="inline-block text-xs font-semibold text-[#B11226] mb-2 uppercase">
                       {program.category}
@@ -105,7 +108,7 @@ export default function InternshipHub() {
                       {program.title}
                     </h3>
 
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 leading-relaxed">
                       {program.description}
                     </p>
                   </div>
@@ -116,7 +119,7 @@ export default function InternshipHub() {
                     }
                     className="mt-8 bg-[#08162F] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-[#B11226] transition"
                   >
-                    Apply Now
+                    Apply for Internship
                   </button>
                 </div>
               </div>

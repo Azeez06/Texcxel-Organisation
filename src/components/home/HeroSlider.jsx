@@ -61,7 +61,7 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* DARK GRADIENT OVERLAY */}
-     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
   {/* CONTENT */}
       <div
   className="
@@ -69,9 +69,11 @@ export default function HeroSlider() {
     max-w-7xl mx-auto
     px-6 md:px-10
     h-full
-    flex items-center
+    flex items-start md:items-center
+    pt-20 md:pt-0
   "
 >
+
         <AnimatePresence mode="wait">
           <motion.div
             key={slide.id}
@@ -79,11 +81,12 @@ export default function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.7 }}
-            className=" max-w-xl
-    -mt-12
-    sm:-mt-6
-    md:mt-0"
-          >
+            className="
+  max-w-xl
+  -mt-12 sm:-mt-6
+  md:-mt-16
+"
+>
            <p className="text-red-600 font-bold uppercase tracking-wide mb-3 md:mb-6">
 
               {slide.eyebrow}
