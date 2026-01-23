@@ -6,39 +6,15 @@ import { Clock, TrendingUp, UserPlus, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import logo from "../assets/logo/techcxel-logo.png";
+import Newsletter from "../components/Newsletter";
+import NewsletterModal from "../components/NewsletterModal";
 
-const services = [
-  {
-    title: "You Need Websites That Actually Work",
-    text: "Many websites look good but fail to deliver results. TechcXel builds clean, scalable websites that are easy to use, fast to load, and designed to support real growth — not just online presence.",
-    link: "/website",
-  },
-  {
-    title: "You Need Clear, Trustworthy Branding",
-    text: "Inconsistent visuals and weak design reduce credibility. We help you communicate clearly through strong brand identities and graphics that build trust and recognition across digital platforms.",
-  },
-  {
-    title: "You Need Skills That Go Beyond Theory",
-    text: "Learning tech shouldn’t stop at tutorials. TechcXel focuses on hands-on training and mentorship that prepares you to work on real projects with confidence.",
-    link: "/internship",
-  },
-  {
-    title: "You Need Systems That Save Time and Effort",
-    text: "Manual processes slow teams down. We integrate AI tools, automation, and smart systems that improve efficiency, streamline workflows, and enhance user experience.",
-    link: "/ai-integration",
-  },
-  {
-    title: "You Need Real Project Experience",
-    text: "Experience matters more than certificates. Our internship structure exposes learners to real-world design and development workflows, helping them build confidence and practical competence.",
-  },
-  {
-    title: "You Need Tools That Solve Public Problems",
-    text: "Access to useful digital tools shouldn’t be limited. TechcXel builds free public-good platforms that help students, professionals, and communities solve everyday challenge.",
-    link: "/public-platforms",
-  },
-];
+
 
 export default function Home() {
+const [newsletterOpen, setNewsletterOpen] = useState(false);
+
   const cards = ["career", "academic", "coming"];
 const [activeCard, setActiveCard] = useState(0);
 const [visible, setVisible] = useState(true);
@@ -180,9 +156,15 @@ useEffect(() => {
   <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
 
     {/* BRAND */}
-    <h1 className="text-xl font-extrabold tracking-tight text-[#0F172A]">
-      <span className="text-[#B11226]">Tech</span>cXel
-    </h1>
+  <Link to="/" className="flex items-center gap-2">
+  <img
+  src={logo}
+  alt="TechcXel logo"
+  className="h-12 w-auto object-contain"
+ />
+
+</Link>
+
 
     {/* NAV LINKS */}
     <nav className="hidden md:flex gap-10 text-sm font-medium text-gray-700">
@@ -334,66 +316,13 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
   </div>
 </section>
 
-
-<section className=" bg-[#F6F1E8] -mt-16 md:mt-0 "> 
-  
-<div className="max-w-7xl mx-auto px-10 py-28">
-{/* HEADER */} 
-<div className="max-w-2xl mx-auto mb-14 text-center">
-  <h1 className="text-5xl md:text-6xl font-extrabold text-[#0F172A] mb-3">
-    Why You Need{" "}
-    <span className="text-[#B11226]">Us</span>
-  
-  </h1>
-
-</div>
-
-
-    {/* CARDS */}
-    <div className="grid md:grid-cols-3 gap-6">
-      {services.map((item, i) => {
-        const Card = (
-          <div
-            className="
-             bg-white rounded-xl p-6 min-h-[260px] flex flex-col justify-between border border-gray-200 transition duration-300 hover:border-[#B11226] hover:-translate-y-1
-            "
-          >
-            <div>
-              <h3 className="text-xl font-extrabold text-[#0F172A] mb-3">
-                {item.title}
-              </h3>
-
-              <p className="text-base text-gray-600 leading-relaxed">
-                {item.text}
-              </p>
-            </div>
-
-            <span className="mt-6 text-sm font-semibold text-[#B11226] hover:underline">
-              Learn more →
-            </span>
-          </div>
-        );
-
-        return item.link ? (
-          <Link key={i} to={item.link}>
-            {Card}
-          </Link>
-        ) : (
-          <div key={i}>{Card}</div>
-        );
-      })}
-    </div>
-
-  </div>
-</section>
-
 <section className="bg-[#FAF7F2] border-t border-gray-200">
-  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-28">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-32">
 
     <div className="relative">
 
       {/* SECTION TITLE */}
-      <div className="absolute left-1/2 -translate-x-1/2 -top-10 z-20">
+      <div className="absolute left-1/2 -translate-x-1/2 -top-12 z-20">
         <h2 className="font-extrabold tracking-tight whitespace-nowrap text-2xl sm:text-3xl md:text-6xl text-center">
           <span className="text-[#B11226]">Tech</span>
           <span className="text-[#0A1F44]">cXel</span>
@@ -404,62 +333,71 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
       </div>
 
       {/* CONTENT */}
-      <div className="grid md:grid-cols-2 gap-14 items-center pt-16">
+      <div className="grid md:grid-cols-2 gap-16 items-center pt-20">
 
         {/* IMAGE */}
         <img
           src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
           alt="Young people learning and building with technology"
-          className="w-full h-[560px] object-cover rounded-3xl"
+          className="w-full h-[580px] object-cover rounded-3xl"
         />
 
         {/* TEXT */}
-        <div className="space-y-10">
+        <div className="space-y-12">
 
           {/* CORE BELIEF */}
           <div>
-            <p className="text-2xl font-bold text-[#0A1F44] leading-snug mb-4">
-              Nigeria doesn’t lack talent.
-              <br />
+            <p className="text-2xl font-bold text-[#0A1F44] leading-snug mb-6 text-justify">
+              Nigeria does not lack talent.
               It lacks accessible tools and practical learning.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              TechcXel exists to close that gap — by building digital tools that
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              TechcXel exists to close that gap by building digital tools that
               solve real problems and by teaching technology in a way that is
-              practical, grounded, and usable.
+              practical, grounded, and immediately usable.
             </p>
           </div>
 
           {/* VALUES */}
           <div className="border-l-4 border-[#B11226] pl-6">
-            <p className="text-gray-700 leading-relaxed">
-              We believe technology should simplify life, not complicate it.
+            <p className="text-gray-700 leading-relaxed text-justify">
+              We believe technology should simplify life rather than complicate it.
               Every system we design is guided by clarity, usefulness, and
-              real-world impact — not hype.
+              measurable real-world impact.
             </p>
           </div>
 
           {/* DIRECTION */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-3 gap-8 pt-4">
 
             <div>
-              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-2">
-                What We’re Doing Now
+              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-3">
+                What We’re Doing
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Building and refining focused digital tools while training
-                people to use and build technology confidently.
+              <p className="text-gray-600 leading-relaxed text-justify">
+                Designing and refining focused digital platforms while training
+                talents to confidently build technology.
               </p>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-2">
+              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-3">
                 Where We’re Going
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Creating long-lasting digital solutions that improve access,
-                productivity, and opportunity across Nigerian sectors.
+              <p className="text-gray-600 leading-relaxed text-justify">
+                Creating durable digital solutions that improve access,
+                productivity, and opportunity across key Nigerian sectors.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold text-[#B11226] uppercase tracking-wide mb-3">
+                Who We Work With
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-justify">
+                Students, startups and organisations that are
+                serious about building systems with long-term value.
               </p>
             </div>
 
@@ -472,17 +410,130 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
   </div>
 </section>
 
+<section className="bg-white">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
 
+    {/* HEADER */}
+    <div className="max-w-3xl mx-auto text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F172A] mb-6">
+        Why Talents Trust{" "}
+        <span className="text-[#B11226]">TechcXel</span>
+      </h2>
 
+      <p className="text-lg text-gray-600 leading-relaxed">
+        We earn trust by building real systems, growing real skills,
+        and solving problems people actually face.
+      </p>
+    </div>
+
+    {/* CARDS */}
+    <div className="grid md:grid-cols-4 gap-8 items-start">
+
+      {/* CARD 1 — CREAM */}
+      <div className="bg-[#F6F1E8] rounded-2xl p-8 border border-[#E7E2D8] shadow-sm">
+        <p className="text-[#0F172A] leading-relaxed mb-12">
+          “Working with TechcXel changed how I approach digital products.
+          Their process is clear, thoughtful, and grounded in real user needs.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+            alt="Amina Yusuf"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-semibold text-[#0F172A]">
+              Amina Yusuf
+            </p>
+            <p className="text-sm text-gray-600">
+              Product Designer
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CARD 2 — DEEP NAVY (UP) */}
+      <div className="bg-[#0A1F44] text-white rounded-2xl p-8 shadow-lg md:-translate-y-6">
+        <p className="text-gray-200 leading-relaxed mb-12">
+          “The TechcXel internship gave me confidence to work on real projects.
+          I learned how modern teams actually design and build systems.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+            alt="Samuel Okorie"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-semibold">
+              Samuel Okorie
+            </p>
+            <p className="text-sm text-gray-300">
+              Frontend Developer
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CARD 3 — WHITE (DOWN) */}
+      <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm md:translate-y-6">
+        <p className="text-gray-700 leading-relaxed mb-12">
+          “What stands out is how TechcXel designs for Nigerian realities.
+          Their tools reduce friction instead of adding complexity.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80"
+            alt="Ibrahim Sadiq"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-semibold text-[#0F172A]">
+              Ibrahim Sadiq
+            </p>
+            <p className="text-sm text-gray-600">
+              Research Analyst
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CARD 4 — CREAM */}
+      <div className="bg-[#F6F1E8] rounded-2xl p-8 border border-[#E7E2D8] shadow-sm">
+        <p className="text-[#0F172A] leading-relaxed mb-12">
+          “TechcXel thinks beyond visuals. They care about systems,
+          scalability, and long-term value — that mindset is rare.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80"
+            alt="Blessing Adeyemi"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-semibold text-[#0F172A]">
+              Blessing Adeyemi
+            </p>
+            <p className="text-sm text-gray-600">
+              Startup Founder
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <section className="bg-[#F6F1E8] border-t border-gray-200">
   <div className="max-w-7xl mx-auto px-10 py-24">
-
     <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12">
       Our <span className="text-[#B11226]">Media</span> Insight
     </h2>
-
     <div className="flex md:grid md:grid-cols-3 gap-10 overflow-x-auto md:overflow-visible pb-4">
-
      <motion.a
   href="https://aibase.ng"
   target="_blank"
@@ -492,7 +543,7 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
   {/* IMAGE */}
   <div className="h-76 overflow-hidden">
     <img
-      src="https://aibase.ng/wp-content/uploads/2026/01/v2-16sxo9-t3z6a-768x512.jpg"
+      src="https://tse4.mm.bing.net/th/id/OIP.m5JxnlISrYzEAkqsHvC0VQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3"
       alt="AI and tech developments in Nigeria"
       className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
     />
@@ -582,7 +633,6 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
 
   </div>
 </section>
-
 
 <section className="bg-white py-24">
   <div className="max-w-6xl mx-auto px-6 text-center">
@@ -681,7 +731,7 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
 
       {/* Student */}
       <a
-        href="/tools"
+        href="/internship"
         className="px-8 py-4 text-sm font-semibold rounded-lg
                    bg-white text-[#0F172A] border border-[#E5E0D6]
                    hover:bg-gray-50 transition"
@@ -691,22 +741,22 @@ hover:-translate-y-1 transition-all duration-300 min-h-[540px]">
 
       {/* Website */}
       <a
-        href="/studio"
+        href="/public-platforms"
         className="px-8 py-4 text-sm font-semibold rounded-lg
                    border-2 border-[#0F172A] text-[#0F172A]
                    hover:bg-[#0F172A] hover:text-white transition"
       >
-        I Need a Website
+        I want to Explore
       </a>
 
       {/* Learn Tech */}
       <a
-        href="/academy"
+        href="/website"
         className="px-8 py-4 text-sm font-semibold rounded-lg
                    bg-[#B11226] text-white
                    hover:bg-red-700 transition"
       >
-        I Want to Learn Tech
+        I Want a Website
       </a>
 
     </div>

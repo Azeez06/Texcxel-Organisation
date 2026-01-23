@@ -1,10 +1,8 @@
 import React from "react";
 import Footer from "../components/common/Footer";
 import { Link } from "react-router-dom";
-
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
 export default function Website() {
   const navigate = useNavigate();
   return (
@@ -82,455 +80,562 @@ export default function Website() {
       </div>
     </section>
 
+{/* ================= CONSULTATION SECTION ================= */}
+<section className="bg-[#FBF6EF] border-t border-[#E7E2D8]">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
 
-{/* E-COMMERCE SECTION */}
-<section className="bg-gray-50 py-24">
-  <div className="max-w-7xl mx-auto px-8">
-
-    {/* HEADER — CENTERED */}
-    <div className="max-w-3xl mx-auto mb-16 text-center">
-      <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">
-        E-Commerce Websites
+    {/* HEADER */}
+    <div className="max-w-3xl mb-16">
+      <p className="text-xs font-semibold tracking-widest uppercase text-[#B11226] mb-4">
+        Website Consultation & Strategy
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        Online stores built for growth and scalability
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1F44] leading-tight mb-5">
+        The decisions before code <br className="hidden sm:block" />
+        determine the outcome.
       </h2>
-      <p className="text-gray-600 leading-relaxed">
-        We design e-commerce platforms ranging from simple product catalogs
-        to advanced systems with secure payments and AI-powered customer support.
+
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        Before design. Before development. We help organisations make the right
+        website decisions early — so your build is clear, efficient, and built
+        for real results.
       </p>
     </div>
 
     {/* CARDS */}
-    <div className="grid md:grid-cols-3 gap-10 mb-20">
+    <div className="grid md:grid-cols-3 gap-8">
 
-      {/* CARD 1 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition group">
-        <div className="h-64 md:h-72">
-          <img
-            src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=1200&q=80"
-            alt="E-commerce website storefront"
-            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
+      {/* CARD 1 — CREAM */}
+      <div className="rounded-3xl bg-[#F6F1E8] border border-[#E7E2D8] p-10 shadow-sm hover:shadow-xl transition">
+        <div className="mb-6">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            Strategy
+          </span>
         </div>
-        <div className="p-6 flex flex-col justify-between h-[180px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2">
-              Standard E-Commerce Website
-            </h3>
-            <p className="text-sm text-gray-600">
-              A clean online store showcasing products, categories, and promotions.
-            </p>
-          </div>
 
-          <Link
-            to="/ecommerce/basic"
-            className="mt-4 text-sm font-semibold text-blue-700 hover:underline"
-          >
-            View details →
-          </Link>
-        </div>
-      </div>
+        <h3 className="text-xl md:text-2xl font-extrabold text-[#0A1F44] mb-4 leading-snug">
+          Business & Website Discovery
+        </h3>
 
-      {/* CARD 2 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition group">
-        <div className="h-64 md:h-72">
-          <img
-            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80"
-            alt="Online payment and checkout system"
-            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
-        </div>
-        <div className="p-6 flex flex-col justify-between h-[180px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2">
-              Payment Gateway Integration
-            </h3>
-            <p className="text-sm text-gray-600">
-              Secure checkout systems with cards, transfers, and mobile payments.
-            </p>
-          </div>
+        <p className="text-gray-700 leading-relaxed">
+          We define your goals, audience, and success metrics — then translate
+          that into a website direction that makes sense. This prevents wrong
+          assumptions, wasted effort, and “nice-looking” websites that fail to
+          deliver outcomes.
+        </p>
 
-          <Link
-            to="/ecommerce/payments"
-            className="mt-4 text-sm font-semibold text-blue-700 hover:underline"
-          >
-            View details →
-          </Link>
+        <div className="mt-8 pt-6 border-t border-[#E7E2D8]">
+          <p className="text-sm text-gray-600">
+            Output: clear scope, priorities, and direction.
+          </p>
         </div>
       </div>
 
-      {/* CARD 3 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition group">
-        <div className="h-64 md:h-72">
-          <img
-            src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?auto=format&fit=crop&w=1200&q=80"
-            alt="AI chatbot on website interface"
-            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          />
+      {/* CARD 2 — NAVY (HIGH CONTRAST) */}
+      <div className="rounded-3xl bg-[#0A1F44] p-10 shadow-[0_25px_70px_rgba(0,0,0,0.25)] hover:shadow-[0_35px_90px_rgba(0,0,0,0.35)] transition">
+        <div className="mb-6">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#FCA5A5]">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            UX & Structure
+          </span>
         </div>
-        <div className="p-6 flex flex-col justify-between h-[180px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2">
-              AI Chatbot E-Commerce
-            </h3>
-            <p className="text-sm text-gray-600">
-              Intelligent chatbots that assist customers and boost conversions.
-            </p>
-          </div>
 
-          <Link
-            to="/ecommerce/ai"
-            className="mt-4 text-sm font-semibold text-blue-700 hover:underline"
-          >
-            View details →
-          </Link>
+        <h3 className="text-xl md:text-2xl font-extrabold text-[#F6F1E8] mb-4 leading-snug">
+          User Experience & Content Planning
+        </h3>
+
+        <p className="text-gray-200 leading-relaxed">
+          We plan the structure of your pages, user journeys, and content flow —
+          so your website is intuitive, focused, and easy to use. No clutter.
+          No confusing navigation. Just clarity that guides users to action.
+        </p>
+
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-sm text-gray-300">
+            Output: sitemap, content plan, and UX direction.
+          </p>
+        </div>
+      </div>
+
+      {/* CARD 3 — CREAM */}
+      <div className="rounded-3xl bg-[#F6F1E8] border border-[#E7E2D8] p-10 shadow-sm hover:shadow-xl transition">
+        <div className="mb-6">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+            <span className="h-2 w-2 rounded-full bg-[#B11226]" />
+            Technical
+          </span>
+        </div>
+
+        <h3 className="text-xl md:text-2xl font-extrabold text-[#0A1F44] mb-4 leading-snug">
+          Technical Advisory & Feasibility
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          We recommend the right technology, integrations, and system scope —
+          based on your needs, timeline, and budget. No hype. The goal is a
+          website that stays secure, scalable, and maintainable.
+        </p>
+
+        <div className="mt-8 pt-6 border-t border-[#E7E2D8]">
+          <p className="text-sm text-gray-600">
+            Output: stack guidance, integrations plan, feasibility review.
+          </p>
         </div>
       </div>
 
     </div>
 
+    {/* SUPPORTING LINE + CTA */}
+    <div className="mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+
+      <p className="text-base md:text-lg text-[#0A1F44] font-semibold">
+        Most failed websites fail before they’re built.{" "}
+        <span className="text-gray-700 font-normal">
+          Our consultation process exists to prevent that.
+        </span>
+      </p>
+
+      <div className="flex gap-4">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-lg bg-[#B11226] text-white text-sm font-semibold hover:bg-[#8F0E1E] transition"
+        >
+          Start With a Consultation
+        </a>
+
+        <a
+          href="/website"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-lg border border-[#0A1F44] text-[#0A1F44] text-sm font-semibold hover:bg-[#0A1F44] hover:text-[#F6F1E8] transition"
+        >
+          See Service Scope →
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
+{/* ================= ENGINEERING / TESTING / DEPLOYMENT ================= */}
+<section className="bg-[#FBF6EF] border-t border-[#E7E2D8]">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
 
-<section className="bg-white py-24">
-  <div className="max-w-7xl mx-auto px-8">
-
-    {/* SECTION HEADER */}
-    <div className="max-w-3xl mx-auto mb-16 text-center">
-      <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">
-        Education Websites
+    {/* HEADER */}
+    <div className="max-w-3xl mb-20">
+      <p className="text-xs font-semibold tracking-widest uppercase text-[#B11226] mb-4">
+        Engineering & Delivery
       </p>
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">
-        Digital platforms for learning, growth, and impact
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1F44] leading-tight mb-6">
+        Turning strategy into <br className="hidden sm:block" />
+        reliable digital systems
       </h2>
-      <p className="text-gray-600 leading-relaxed">
-        From simple school websites to advanced learning platforms,
-        we design education-focused solutions that are clear, engaging,
-        and easy to manage.
+
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        Once direction is clear, we engineer, test, and deploy systems that
+        perform consistently under real-world usage.
       </p>
     </div>
 
-    {/* CARDS */}
-    <div className="grid md:grid-cols-3 gap-10">
-
-      {/* CARD 1 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80"
-            alt="Basic education website"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="p-6 flex flex-col justify-between min-h-[220px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Basic Education Website
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              A simple and professional website for schools, training centers,
-              or academies to share information, admissions, and announcements.
+    {/* PROCESS RAIL */}
+    <div className="relative mb-24 hidden md:block">
+      <div className="absolute top-1/2 left-0 right-0 h-px bg-[#0A1F44]/20" />
+      <div className="flex justify-between">
+        {["Engineering", "Testing", "Deployment"].map((step, i) => (
+          <div key={i} className="relative">
+            <span className="h-4 w-4 rounded-full bg-[#B11226] absolute -top-2 left-1/2 -translate-x-1/2" />
+            <p className="mt-6 text-sm font-semibold text-[#0A1F44]">
+              {step}
             </p>
           </div>
-
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
-        </div>
+        ))}
       </div>
-
-      {/* CARD 2 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
-            alt="Advanced education platform"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="p-6 flex flex-col justify-between min-h-[220px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Advanced Education Platform
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Enhanced education websites with course listings, student portals,
-              downloadable materials, and interactive content.
-            </p>
-          </div>
-
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Contact Us →
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* CARD 3 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1600195077077-7c815f540a3a?auto=format&fit=crop&w=1200&q=80"
-            alt="Smart learning system"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="p-6 flex flex-col justify-between min-h-[220px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Smart Learning System
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Advanced learning platforms with LMS integration, virtual classrooms,
-              analytics, and AI-powered student engagement tools.
-            </p>
-          </div>
-
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section className="bg-gray-50 py-24">
-  <div className="max-w-7xl mx-auto px-8">
-
-    {/* SECTION HEADER */}
-    <div className="max-w-3xl mx-auto mb-16 text-center">
-      <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">
-        NGO & Non-Profit Websites
-      </p>
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">
-        Websites that tell stories and drive impact
-      </h2>
-      <p className="text-gray-600 leading-relaxed">
-        We help non-profits and social impact organizations communicate
-        their mission clearly, inspire trust, and connect with donors,
-        partners, and communities.
-      </p>
     </div>
 
     {/* CARDS */}
     <div className="grid md:grid-cols-3 gap-10">
 
-      {/* CARD 1 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
+      {/* ENGINEERING */}
+      <div className="rounded-3xl bg-white border border-[#E7E2D8] shadow-lg hover:-translate-y-1 transition duration-300">
+        <div className="h-56 overflow-hidden rounded-t-3xl">
           <img
-            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80"
-            alt="NGO basic website"
-            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+            alt="Software engineering and development"
+            className="w-full h-full object-cover hover:scale-105 transition duration-500"
           />
         </div>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Basic NGO Website
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              A clean and informative website that showcases your mission,
-              activities, team, and contact information.
-            </p>
-          </div>
+        <div className="p-8">
+          <span className="text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+            Engineering
+          </span>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
+          <h3 className="text-xl md:text-2xl font-extrabold text-[#0A1F44] mt-3 mb-4">
+            Product-Grade Development
+          </h3>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            We build clean, scalable, and secure websites and platforms using
+            modern frontend and backend technologies — designed to grow with
+            your organisation.
+          </p>
+
+          <p className="text-sm text-gray-600">
+            Output: production-ready systems, documented architecture.
+          </p>
         </div>
       </div>
 
-      {/* CARD 2 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-            alt="NGO programs and campaigns"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* TESTING */}
+      <div className="rounded-3xl bg-white border border-[#E7E2D8] shadow-lg hover:-translate-y-1 transition duration-300">
+       <div className="h-56 overflow-hidden rounded-t-3xl">
+  <img
+    src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
+    alt="Website usability and quality assurance testing"
+    className="w-full h-full object-cover hover:scale-105 transition duration-500"
+  />
+</div>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Program-Focused NGO Website
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Websites designed to highlight projects, campaigns, impact stories,
-              galleries, and volunteer opportunities.
-            </p>
-          </div>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Contact Us →
-            </span>
-          </div>
+        <div className="p-8">
+          <span className="text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+            Testing
+          </span>
+
+          <h3 className="text-xl md:text-2xl font-extrabold text-[#0A1F44] mt-3 mb-4">
+            Performance & Quality Assurance
+          </h3>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            We test usability, responsiveness, and performance across devices
+            and browsers — resolving issues before real users encounter them.
+          </p>
+
+          <p className="text-sm text-gray-600">
+            Output: validated builds, performance tuning.
+          </p>
         </div>
       </div>
 
-      {/* CARD 3 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
+      {/* DEPLOYMENT */}
+      <div className="rounded-3xl bg-white border border-[#E7E2D8] shadow-lg hover:-translate-y-1 transition duration-300">
+        <div className="h-56 overflow-hidden rounded-t-3xl">
           <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
-            alt="Advanced NGO platform"
-            className="w-full h-full object-cover"
+            src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
+            alt="Cloud deployment and hosting"
+            className="w-full h-full object-cover hover:scale-105 transition duration-500"
           />
         </div>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Advanced NGO Platform
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Full-featured platforms with donation systems, volunteer portals,
-              event management, reports, and data-driven storytelling.
-            </p>
-          </div>
+        <div className="p-8">
+          <span className="text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+            Deployment
+          </span>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
+          <h3 className="text-xl md:text-2xl font-extrabold text-[#0A1F44] mt-3 mb-4">
+            Launch, Hosting & Stability
+          </h3>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            We deploy on secure, scalable infrastructure, configure domains,
+            optimise performance, and ensure long-term stability post-launch.
+          </p>
+
+          <p className="text-sm text-gray-600">
+            Output: live deployment, monitoring readiness.
+          </p>
         </div>
       </div>
 
     </div>
+
+    {/* CTA */}
+    <div className="mt-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <p className="text-lg font-semibold text-[#0A1F44]">
+        Delivery is where strategy becomes reality.
+      </p>
+
+      <a
+        href="/contact"
+        className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#B11226] text-white text-sm font-semibold hover:bg-[#8F0E1E] transition"
+      >
+        Discuss Your Project
+      </a>
+    </div>
+
   </div>
 </section>
 
-<section className="bg-white py-24">
-  <div className="max-w-7xl mx-auto px-8">
+{/* ================= INDUSTRIES & USE-CASES ================= */}
+<section className="bg-[#FBF6EF] border-t border-[#E7E2D8]">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">
 
-    {/* SECTION HEADER */}
-    <div className="max-w-3xl mx-auto mb-16 text-center">
-      <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">
-        Media & Communication
+    {/* HEADER */}
+    <div className="max-w-3xl mb-20">
+      <p className="text-xs font-semibold tracking-widest uppercase text-[#B11226] mb-4">
+        Industries & Use-Cases
       </p>
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">
-        Platforms for storytelling, publishing, and engagement
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#0A1F44] leading-tight mb-6">
+        Built for real sectors, <br className="hidden sm:block" />
+        real workflows, real people
       </h2>
-      <p className="text-gray-600 leading-relaxed">
-        We build media-focused websites that help journalists, creators,
-        and organizations publish content, manage audiences, and amplify
-        their voices in the digital space.
+
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+        We don’t design in abstraction. Our work is shaped by the realities
+        of the industries and communities we serve.
       </p>
     </div>
 
-    {/* CARDS */}
-    <div className="grid md:grid-cols-3 gap-10">
+    {/* GRID */}
+    <div className="grid md:grid-cols-2 gap-12">
 
-      {/* CARD 1 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80"
-            alt="Media portfolio website"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* EDUCATION */}
+      <div className="bg-white rounded-3xl border border-[#E7E2D8] shadow-lg p-10 hover:-translate-y-1 transition">
+        <span className="inline-block mb-4 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+          Education
+        </span>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Basic Media Website
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Simple and clean websites for journalists, writers, or media
-              teams to showcase articles, portfolios, and contact details.
-            </p>
-          </div>
+        <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
+          Schools, Students & Academic Workflows
+        </h3>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
-        </div>
+        <p className="text-gray-700 leading-relaxed mb-6">
+          We build platforms that simplify learning, research, and academic
+          administration — especially within Nigerian educational contexts.
+        </p>
+
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Student portals and academic tools
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Research and data analysis platforms
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Career and skills development systems
+          </li>
+        </ul>
       </div>
 
-      {/* CARD 2 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80"
-            alt="Online media platform"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* STARTUPS & BUSINESSES */}
+      <div className="bg-white rounded-3xl border border-[#E7E2D8] shadow-lg p-10 hover:-translate-y-1 transition">
+        <span className="inline-block mb-4 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+          Startups & Businesses
+        </span>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              News & Publishing Platform
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Advanced platforms with article management, categories,
-              multimedia publishing, and audience-friendly layouts.
-            </p>
-          </div>
+        <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
+          Growth-Focused Digital Products
+        </h3>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Contact Us →
-            </span>
-          </div>
-        </div>
+        <p className="text-gray-700 leading-relaxed mb-6">
+          We work with founders and teams to design and launch websites that
+          support growth, credibility, and operations — not just presence.
+        </p>
+
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Company websites and landing pages
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            E-commerce and payment systems
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Internal tools and dashboards
+          </li>
+        </ul>
       </div>
 
-      {/* CARD 3 */}
-      <div className="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
-        <div className="h-64 md:h-72 bg-gray-100">
-          <img
-            src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?auto=format&fit=crop&w=1200&q=80"
-            alt="Advanced media platform"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* MEDIA & CONTENT */}
+      <div className="bg-white rounded-3xl border border-[#E7E2D8] shadow-lg p-10 hover:-translate-y-1 transition">
+        <span className="inline-block mb-4 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+          Media & Content
+        </span>
 
-        <div className="p-6 flex flex-col justify-between min-h-[230px]">
-          <div>
-            <h3 className="font-semibold text-gray-800 mb-2 text-lg">
-              Advanced Media Platform
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Full-scale media systems with analytics, subscriptions,
-              editorial workflows, and audience engagement tools.
-            </p>
-          </div>
+        <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
+          Publishing, News & Digital Storytelling
+        </h3>
 
-          <div className="pt-4">
-            <span className="text-sm font-medium text-[#B11226] hover:underline cursor-pointer">
-              Learn More →
-            </span>
-          </div>
-        </div>
+        <p className="text-gray-700 leading-relaxed mb-6">
+          We design media platforms that balance speed, clarity, and scale —
+          enabling teams to publish efficiently and engage audiences.
+        </p>
+
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            News and magazine websites
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Content management systems
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Analytics and audience insights
+          </li>
+        </ul>
       </div>
 
+      {/* NGOs & PUBLIC SECTOR */}
+      <div className="bg-white rounded-3xl border border-[#E7E2D8] shadow-lg p-10 hover:-translate-y-1 transition">
+        <span className="inline-block mb-4 text-xs font-semibold tracking-widest uppercase text-[#B11226]">
+          NGOs & Public Sector
+        </span>
+
+        <h3 className="text-2xl font-extrabold text-[#0A1F44] mb-4">
+          Platforms for Impact & Access
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          We support organisations focused on social impact with platforms
+          that communicate clearly, scale responsibly, and serve communities.
+        </p>
+
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Programme and campaign websites
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Data collection and reporting tools
+          </li>
+          <li className="flex gap-3">
+            <span className="h-2 w-2 mt-2 rounded-full bg-[#B11226]" />
+            Public-facing digital services
+          </li>
+        </ul>
+      </div>
     </div>
+
+    {/* FOOTNOTE */}
+    <div className="mt-20 max-w-3xl">
+      <p className="text-lg font-semibold text-[#0A1F44]">
+        If your use-case doesn’t fit neatly into a box, that’s fine.
+      </p>
+      <p className="text-gray-700 mt-2">
+        Our process adapts to problems — not templates.
+      </p>
+    </div>
+
   </div>
 </section>
 
 
+{/* ================= FINAL CTA ================= */}
+<section className="bg-[#FBF6EF] border-t border-[#E7E2D8]">
+  <div className="max-w-7xl mx-auto px-6 sm:px-10 py-32">
+
+    {/* NAVY WRAP */}
+    <div className="relative rounded-3xl bg-[#0A1F44] px-8 sm:px-16 py-24 overflow-hidden">
+
+      {/* subtle gradient accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1F44] via-[#0F2A5C] to-[#08162F]" />
+
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
+
+        {/* Eyebrow */}
+        <p className="text-xs font-semibold tracking-widest uppercase text-[#FCA5A5] mb-4">
+          Ready to move forward?
+        </p>
+
+        {/* Title */}
+        <h2 className="text-3xl md:text-5xl font-extrabold text-[#F6F1E8] leading-tight mb-6">
+          Choose how you want <br className="hidden sm:block" />
+          to work with TechcXel
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-14">
+          Whether you’re learning, building, or solving a specific problem,
+          there’s a clear next step.
+        </p>
+
+        {/* CTA OPTIONS */}
+        <div className="grid sm:grid-cols-3 gap-6">
+
+          {/* STUDENT */}
+          <a
+            href="/academy"
+            className="group rounded-2xl bg-[#F6F1E8] text-[#0A1F44] px-8 py-8 text-left hover:-translate-y-1 transition shadow-lg"
+          >
+            <p className="text-sm font-semibold text-[#B11226] mb-2">
+              For Students
+            </p>
+            <h3 className="text-lg font-extrabold mb-3">
+              Learn Practical Tech Skills
+            </h3>
+            <p className="text-sm text-gray-700 mb-4">
+              Gain hands-on experience through guided training and real-world
+              projects.
+            </p>
+            <span className="text-sm font-semibold text-[#B11226]">
+              Explore Training →
+            </span>
+          </a>
+
+          {/* ORGANISATION */}
+          <a
+            href="/contact"
+            className="group rounded-2xl bg-white text-[#0A1F44] px-8 py-8 text-left hover:-translate-y-1 transition shadow-lg"
+          >
+            <p className="text-sm font-semibold text-[#B11226] mb-2">
+              For Organisations
+            </p>
+            <h3 className="text-lg font-extrabold mb-3">
+              Build or Improve a Website
+            </h3>
+            <p className="text-sm text-gray-700 mb-4">
+              Start with consultation, then move into engineering and delivery
+              with clarity.
+            </p>
+            <span className="text-sm font-semibold text-[#B11226]">
+              Start a Conversation →
+            </span>
+          </a>
+
+          {/* FOUNDERS / PUBLIC */}
+          <a
+            href="/public-platforms"
+            className="group rounded-2xl bg-[#F6F1E8] text-[#0A1F44] px-8 py-8 text-left hover:-translate-y-1 transition shadow-lg"
+          >
+            <p className="text-sm font-semibold text-[#B11226] mb-2">
+              For Builders & Communities
+            </p>
+            <h3 className="text-lg font-extrabold mb-3">
+              Explore Public Platforms
+            </h3>
+            <p className="text-sm text-gray-700 mb-4">
+              See the free tools we’ve built to solve real problems at scale.
+            </p>
+            <span className="text-sm font-semibold text-[#B11226]">
+              View Platforms →
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    {/* CLOSING LINE */}
+    <div className="mt-16 text-center max-w-2xl mx-auto">
+      <p className="text-lg font-semibold text-[#0A1F44]">
+        Thoughtful technology starts with clear intent.
+      </p>
+      <p className="text-gray-700 mt-2">
+        We’re ready when you are.
+      </p>
+    </div>
+
+  </div>
+</section>
       <Footer />
     </>
   );

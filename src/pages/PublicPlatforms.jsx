@@ -3,36 +3,51 @@ export default function PublicPlatforms() {
     <main className="bg-[#FBF6EF] text-[#0F172A]">
 
      {/* ================= HERO ================= */}
-<section className="relative bg-[#0A1F44] overflow-hidden">
-  {/* Decorative gradient */}
-  <div className="absolute inset-0 bg-gradient-to-br from-[#0A1F44] via-[#0F2A5C] to-[#08162F]" />
-
-  {/* Soft image accent */}
-  <img
-    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
-    alt="People collaborating with technology"
-    className="absolute right-0 top-0 h-full w-full md:w-1/2 object-cover opacity-20"
+{/* ================= HERO ================= */}
+<section
+  className="
+    relative
+    h-[70vh]
+    min-h-[520px]
+    md:h-[85vh]
+    md:min-h-[620px]
+    overflow-hidden
+  "
+>
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80)",
+    }}
   />
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 py-28">
-    <div className="grid md:grid-cols-2 gap-16 items-center">
-{/* COPY */}
-<div>
-  <span className="inline-block mb-5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-[#B11226] bg-white/10 rounded-full">
-    Open-Access Digital Products
-  </span>
+  {/* GRADIENT BLEND (same logic as Website hero) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#08162F]/90 via-[#0A1F44]/85 to-[#08162F]/95" />
 
-  <h1 className="text-4xl md:text-6xl font-extrabold text-[#FAF7F2] leading-tight mb-6">
-    Built for <span className="text-[#F6F1E8]">Nigerian Realities</span>
-  </h1>
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 h-full flex items-center">
+    <div className="grid md:grid-cols-2 gap-16 items-center w-full">
 
-  <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mb-10">
-    We design and release public digital platforms that solve recurring
-    problems in education, careers, and research — intentionally built
-    without paywalls, ads, or unnecessary complexity.
-  </p>
-        {/* Proof / positioning */}
-        <div className="flex flex-wrap gap-6 text-sm text-gray-300">
+      {/* COPY */}
+      <div>
+        <span className="inline-block mb-5 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-[#B11226] bg-white/10 rounded-full">
+          Open-Access Digital Products
+        </span>
+
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[#FAF7F2] leading-tight mb-6">
+          Built for <span className="text-[#F6F1E8]">Nigerian Realities</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-xl mb-10">
+          We design and release public digital platforms that solve recurring
+          problems in education, careers, and research — intentionally built
+          without paywalls, ads, or unnecessary complexity.
+        </p>
+
+        {/* Proof points */}
+        <div className="flex flex-wrap gap-6 text-sm text-gray-200">
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#B11226]" />
             Free by design
@@ -47,38 +62,39 @@ export default function PublicPlatforms() {
           </span>
         </div>
       </div>
-      {/* VISUAL BLOCK */}
+
+      {/* VISUAL BLOCK (FLOATING CARD) */}
       <div className="hidden md:block">
         <div className="relative bg-[#F6F1E8] rounded-3xl p-8 shadow-2xl border border-white/10">
-          <p className="text-sm font-bold tracking-wide text-[#0F172A] mb-3">
-  What makes these platforms different
-</p>
+          <p className="text-sm font-bold tracking-wide text-[#0F172A] mb-4">
+            What makes these platforms different
+          </p>
 
           <ul className="space-y-4 text-[#0F172A]">
-  <li className="flex gap-3">
-    <span className="text-[#B11226] font-bold">•</span>
-    Designed from real Nigerian workflows
-  </li>
-  <li className="flex gap-3">
-    <span className="text-[#B11226] font-bold">•</span>
-    No forced upgrades or dark patterns
-  </li>
-  <li className="flex gap-3">
-    <span className="text-[#B11226] font-bold">•</span>
-    Clear interfaces, not intimidating tools
-  </li>
-  <li className="flex gap-3">
-    <span className="text-[#B11226] font-bold">•</span>
-    Built as long-term public infrastructure
-  </li>
-</ul>
-
+            <li className="flex gap-3">
+              <span className="text-[#B11226] font-bold">•</span>
+              Designed from real Nigerian workflows
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#B11226] font-bold">•</span>
+              No forced upgrades or dark patterns
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#B11226] font-bold">•</span>
+              Clear interfaces, not intimidating tools
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#B11226] font-bold">•</span>
+              Built as long-term public infrastructure
+            </li>
+          </ul>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 {/* ================= WHY THIS MATTERS ================= */}
 <section className="bg-[#FBF6EF]">
   <div className="max-w-7xl mx-auto px-6 sm:px-10 py-28">

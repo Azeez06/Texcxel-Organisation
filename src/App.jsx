@@ -42,6 +42,8 @@ import BookUs from "./pages/BookUs";
 import YourQuote from "./pages/YourQuote";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Newsletter from "./components/Newsletter";
+import NewsletterModal from "./components/NewsletterModal";
 
 
 function App() {
@@ -57,6 +59,8 @@ function App() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/internship" element={<InternshipHub />} />
         <Route path="/about" element={<About />} />
+        <Route path="/newsletter" element={<Newsletter />} />
+        <Route path="/newsletter-modal" element={<NewsletterModal />} />
 
         <Route path="/courses/frontend" element={<Frontend />} />
         <Route path="/courses/backend" element={<Backend />} />
