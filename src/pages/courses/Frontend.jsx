@@ -1,8 +1,43 @@
 import Footer from "../../components/common/Footer";
 import { useNavigate } from "react-router-dom";
+import api from "../../api/axios";
+import { payWithPaystack } from "../../utils/paystack";
 
 export default function Frontend() {
   const navigate = useNavigate();
+  const handleEnroll = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    navigate("/auth?course=frontend");
+    return;
+  }
+
+  const reference = `TX-${Date.now()}`;
+
+  payWithPaystack({
+    email: user.email,
+    amount: 3000, // ₦3,000
+    reference,
+    onSuccess: async (ref) => {
+      try {
+        await api.post("/payment/verify", {
+          reference: ref,
+          courseId: "6973ee20f7e528ecb82edd7a", // FRONTEND COURSE ID
+        });
+
+        navigate("/dashboard");
+      } catch (err) {
+        alert("Payment verification failed");
+        console.error(err);
+      }
+    },
+    onClose: () => {
+      alert("Payment cancelled");
+    },
+  });
+};
+
   return (
     <main className="bg-[#FFF8EE]">
 
@@ -188,7 +223,7 @@ export default function Frontend() {
             </li>
           </ul>
 <button
-  onClick={() => navigate("/dashboard/frontend")}
+  onClick={handleEnroll}
   className="w-full bg-red-600 text-white py-4 rounded-xl text-lg font-bold hover:bg-red-700 transition"
 >
   Enroll Now

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Website from "./pages/Website";
 import InternshipHub from "./pages/InternshipHub";
@@ -70,7 +70,15 @@ function App() {
         <Route path="/public-platforms" element={<PublicPlatforms />} />
 
        {/* DASHBOARD ROUTES */}
-<Route path="/dashboard" element={<DashboardLayout />}>
+<Route
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <DashboardLayout />
+    </ProtectedRoute>
+  }
+>
+
 
   {/* Dashboard home with track */}
   <Route path=":track" element={<DashboardHome />} />

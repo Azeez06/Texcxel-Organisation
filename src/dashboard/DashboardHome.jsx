@@ -1,12 +1,26 @@
-import { useParams } from "react-router-dom";
-import {Link} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import api from "../api/axios";
 export default function DashboardHome() {
-  const { track } = useParams();
-    const weeks = Array.from({ length: 11 }, (_, i) => ({
-  id: i + 1,
-  title: `Week ${i + 1}`,
-  description: `Learning materials, videos, and assignments for week ${i + 1}`,
-}));
+  const [enrollments, setEnrollments] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api
+      .get("/enrollments/my-courses")
+      .then((res) => setEnrollments(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
+
+  const enrolledTracks = enrollments.map(
+    (item) => item.course.track
+  );
+
+  if (loading) {
+    return <p className="text-gray-500">Loading dashboard...</p>;
+  }
+
   return (
     <div className="space-y-10">
 
@@ -28,62 +42,46 @@ export default function DashboardHome() {
         </h3>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          <StatCard
-            title="Enrolled Programs"
-            value="1"
-          />
-          <StatCard
-            title="Total Modules"
-            value="10"
-          />
-          <StatCard
-            title="Completed Modules"
-            value="1"
-          />
-          <StatCard
-            title="Points Earned"
-            value="20"
-          />
-
+          <StatCard title="Enrolled Programs" value={enrolledTracks.length} />
+          <StatCard title="Total Modules" value="10" />
+          <StatCard title="Completed Modules" value="1" />
+          <StatCard title="Points Earned" value="20" />
         </div>
       </section>
 
       {/* ENROLLED COURSES */}
- <section>
-  <h3 className="text-lg font-semibold mb-6 text-[#0F172A]">
-    Enrolled Courses
-  </h3>
+      <section>
+        <h3 className="text-lg font-semibold mb-6 text-[#0F172A]">
+          Enrolled Courses
+        </h3>
 
-  <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
 
-    <CourseCard
-      title="Frontend Development"
-      duration="4 Weeks"
-      status="In Progress"
-      link="/dashboard/courses/frontend"
-      disabled={track !== "frontend"}
-    />
+          <CourseCard
+            title="Frontend Development"
+            duration="10 Weeks"
+            status="In Progress"
+            link="/dashboard/courses/frontend"
+            disabled={!enrolledTracks.includes("frontend")}
+          />
 
-    <CourseCard
-      title="Backend Development"
-      duration="10 Weeks"
-      status="In Progress"
-      link="/dashboard/courses/backend"
-      disabled={track !== "backend"}
-    />
+          <CourseCard
+            title="Backend Development"
+            duration="10 Weeks"
+            status="In Progress"
+            link="/dashboard/courses/backend"
+            disabled={!enrolledTracks.includes("backend")}
+          />
 
-    <CourseCard
-      title="Full-Stack Development"
-      duration="Coming Soon"
-      link="/dashboard/courses/fullstack"
-      disabled={track !== "fullstack"}
-    />
+          <CourseCard
+            title="Full-Stack Development"
+            duration="Coming Soon"
+            link="/dashboard/courses/fullstack"
+            disabled={!enrolledTracks.includes("fullstack")}
+          />
 
-  </div>
-</section>
-
-
+        </div>
+      </section>
 
     </div>
   );
@@ -107,7 +105,7 @@ function CourseCard({ title, duration, status, disabled, link }) {
     <Wrapper
       to={link}
       className={`rounded-xl p-6 border bg-white ${
-        disabled ? "opacity-50" : "hover:shadow-md cursor-pointer"
+        disabled ? "opacity-50 cursor-not-allowed" : "hover:shadow-md"
       } transition block`}
     >
       <h4 className="font-semibold text-[#0B132B] mb-2">
@@ -124,10 +122,9 @@ function CourseCard({ title, duration, status, disabled, link }) {
         </span>
       ) : (
         <span className="text-sm text-gray-400">
-          Not available yet
+          Not enrolled
         </span>
       )}
     </Wrapper>
   );
 }
-
